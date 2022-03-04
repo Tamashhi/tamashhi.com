@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x8ebdae06f1a32Cd5C3Ccfee240452FE4e6231cBc",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x8ebdae06f1a32cd5c3ccfee240452fe4e6231cbc",
+  "NETWORK": {
+    "NAME": "Rinkeby",
+    "SYMBOL": "ETH",
+    "ID": 4
+  },
+  "NFT_NAME": "Tamashhi",
+  "SYMBOL": "TAMA",
+  "MAX_SUPPLY": 1000,
+  "WEI_COST": 20000000000000000,
+  "DISPLAY_COST": 0.02,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/tamashhi-ohqzoh07nw",
+  "SHOW_BACKGROUND": true
+}
