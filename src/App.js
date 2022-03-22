@@ -66,12 +66,25 @@ export const ResponsiveWrapper = styled.div`
 `;
 
 export const StyledLogo = styled.img`
+  box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
+  border: 4px var(--secondary);
+  background-color: var(--accent);
+  border-radius: 100%;
   width: 200px;
-  @media (min-width: 767px) {
+  @media (min-width: 900px) {
+    width: 250px;
+  }
+  @media (min-width: 1000px) {
     width: 300px;
   }
   transition: width 0.5s;
-  transition: height 0.5s;
+`;
+
+export const StyledMedia = styled.img`
+  width: 100px;
+  @media (min-width: 100px) {
+    width: 100px;
+  }
 `;
 
 export const StyledImg = styled.img`
@@ -89,17 +102,41 @@ export const StyledImg = styled.img`
   transition: width 0.5s;
 `;
 
+export const SmallStyledImg = styled.img`
+  box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
+  background-color: var(--accent);
+  border-radius: 100%;
+  width: 50px;
+  @media (min-width: 900px) {
+    width: 50px;
+  }
+  @media (min-width: 1000px) {
+    width: 50px;
+  }
+  transition: width 0.5s;
+`;
+export const MediaStyledLink = styled.a`
+  color: var(--secondary);
+  text-decoration: none;
+  `;
 export const StyledLink = styled.a`
   color: var(--secondary);
   text-decoration: none;
 `;
+
+
+
+function NewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
 
 function App() {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
+  const [feedback, setFeedback] = useState(`Mint up to 5`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
@@ -112,6 +149,7 @@ function App() {
     NFT_NAME: "",
     SYMBOL: "",
     MAX_SUPPLY: 1,
+    maxMintPerTx: 0,
     WEI_COST: 0,
     DISPLAY_COST: 0,
     GAS_LIMIT: 0,
@@ -202,7 +240,7 @@ function App() {
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
-        <s.SpacerSmall />
+        <s.SpacerXSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg alt={"example"} src={"/config/images/example.gif"} />
@@ -263,18 +301,17 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
-                  {CONFIG.NETWORK.SYMBOL}.
+                  Mint for {CONFIG.DISPLAY_COST} {CONFIG.NETWORK.SYMBOL} each.
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  Excluding gas fees.
+                  Plus reduced gas fees for multiple mints!
                 </s.TextDescription>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
-                blockchain.smartContract === null ? (
+                  blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
                     <s.TextDescription
                       style={{
@@ -282,7 +319,7 @@ function App() {
                         color: "var(--accent-text)",
                       }}
                     >
-                      Connect to the {CONFIG.NETWORK.NAME} network
+                      Connect your MetaMask wallet
                     </s.TextDescription>
                     <s.SpacerSmall />
                     <StyledButton
@@ -307,6 +344,24 @@ function App() {
                         </s.TextDescription>
                       </>
                     ) : null}
+                    <s.SpacerMedium />
+                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                      <MediaStyledLink href={"https://twitter.com"}>
+                        <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
+                      </MediaStyledLink>
+                      <s.SpacerSmall />
+                      <MediaStyledLink href={"https://intsagram.com"}>
+                        <SmallStyledImg alt="Instagram" src="/config/images/instagram.png" />
+                      </MediaStyledLink>
+                      <s.SpacerSmall />
+                      <MediaStyledLink href={"https://discord.com"}>
+                        <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
+                      </MediaStyledLink>
+                      <s.SpacerSmall />
+                      <MediaStyledLink href={"https://opensea.io"}>
+                        <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
+                      </MediaStyledLink>
+                    </s.Container>
                   </s.Container>
                 ) : (
                   <>
@@ -362,6 +417,24 @@ function App() {
                       >
                         {claimingNft ? "BUSY" : "BUY"}
                       </StyledButton>
+                    </s.Container>
+                    <s.SpacerMedium />
+                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                      <MediaStyledLink href={"https://twitter.com"}>
+                        <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
+                      </MediaStyledLink>
+                      <s.SpacerSmall />
+                      <MediaStyledLink href={"https://intsagram.com"}>
+                        <SmallStyledImg alt="Instagram" src="/config/images/instagram.png" />
+                      </MediaStyledLink>
+                      <s.SpacerSmall />
+                      <MediaStyledLink href={"https://discord.com"}>
+                        <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
+                      </MediaStyledLink>
+                      <s.SpacerSmall />
+                      <MediaStyledLink href={"https://opensea.io"}>
+                        <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
+                      </MediaStyledLink>
                     </s.Container>
                   </>
                 )}
