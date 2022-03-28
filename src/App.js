@@ -252,11 +252,11 @@ function App() {
         style={{ padding: 24, backgroundColor: "var(--primary)" }}
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg2.png" : null}
       >
-        <StyledLogo alt={"logo"} src={"/config/images/logoT.png"} />
+        <StyledLogo alt={"logo"} src={"/config/images/Dragon.png"} />
         <s.SpacerXSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg alt={"example"} src={"/config/images/example.png"} />
+            <StyledImg alt={"example"} src={"/config/images/Rat.png"} />
           </s.Container>
           <s.SpacerLarge />
           <s.Container
@@ -459,14 +459,14 @@ function App() {
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg
               alt={"example"}
-              src={"/config/images/example.png"}
+              src={"/config/images/Ox.png"}
               style={{ transform: "scaleX(-1)" }}
             />
           </s.Container>
         </ResponsiveWrapper>
 
 
-
+        <s.SpacerMedium />
         <s.SpacerLarge />
         <s.Container flex={1} jc={"center"} ai={"center"}>
           <s.TextDescription style={{
@@ -474,7 +474,7 @@ function App() {
             color: "var(--secondary-text)",
             fontSize: 50,
           }}>
-            ABOUT US
+            About us
           </s.TextDescription>
         </s.Container>
         <s.SpacerMedium />
@@ -494,7 +494,7 @@ function App() {
                 color: "var(--secondary-text)",
               }}
             >
-              Ish Jogee
+              Ismail Jogee
             </s.TextDescription>
             <s.TextDescription
               style={{
