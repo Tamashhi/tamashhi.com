@@ -89,7 +89,7 @@ export const StyledMedia = styled.img`
 
 export const StyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
-  border: 4px dashed var(--secondary);
+  border: 4px  var(--secondary);
   background-color: var(--accent);
   border-radius: 100%;
   width: 200px;
@@ -112,6 +112,19 @@ export const SmallStyledImg = styled.img`
   }
   @media (min-width: 1000px) {
     width: 50px;
+  }
+  transition: width 0.5s;
+`;
+export const MedStyledImg = styled.img`
+  box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
+  background-color: var(--accent);
+  border-radius: 100%;
+  width: 150px;
+  @media (min-width: 900px) {
+    width: 150px;
+  }
+  @media (min-width: 1000px) {
+    width: 150px;
   }
   transition: width 0.5s;
 `;
@@ -237,13 +250,13 @@ function App() {
         flex={1}
         ai={"center"}
         style={{ padding: 24, backgroundColor: "var(--primary)" }}
-        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
+        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg2.png" : null}
       >
-        <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
+        <StyledLogo alt={"logo"} src={"/config/images/logoT.png"} />
         <s.SpacerXSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg alt={"example"} src={"/config/images/example.gif"} />
+            <StyledImg alt={"example"} src={"/config/images/example.png"} />
           </s.Container>
           <s.SpacerLarge />
           <s.Container
@@ -254,7 +267,7 @@ function App() {
               backgroundColor: "var(--accent)",
               padding: 24,
               borderRadius: 24,
-              border: "4px dashed var(--secondary)",
+              border: "4px  var(--secondary)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
@@ -446,37 +459,147 @@ function App() {
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg
               alt={"example"}
-              src={"/config/images/example.gif"}
+              src={"/config/images/example.png"}
               style={{ transform: "scaleX(-1)" }}
             />
           </s.Container>
         </ResponsiveWrapper>
-        <s.SpacerMedium />
-        <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
-          <s.TextDescription
-            style={{
-              textAlign: "center",
-              color: "var(--primary-text)",
-            }}
-          >
-            Please make sure you are connected to the right network (
-            {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please note:
-            Once you make the purchase, you cannot undo this action.
-          </s.TextDescription>
-          <s.SpacerSmall />
-          <s.TextDescription
-            style={{
-              textAlign: "center",
-              color: "var(--primary-text)",
-            }}
-          >
-            We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
-            successfully mint your NFT. We recommend that you don't lower the
-            gas limit.
+
+
+
+        <s.SpacerLarge />
+        <s.Container flex={1} jc={"center"} ai={"center"}>
+          <s.TextDescription style={{
+            textAlign: "center",
+            color: "var(--secondary-text)",
+            fontSize: 50,
+          }}>
+            ABOUT US
           </s.TextDescription>
         </s.Container>
+        <s.SpacerMedium />
+
+
+
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+          <s.Container flex={2} jc={"center"} ai={"center"}>
+            <MediaStyledLink href={"https://twitter.com"}>
+              <MedStyledImg alt="Twitter" src="/config/images/example.png" />
+            </MediaStyledLink>
+            <s.SpacerLarge />
+            <s.Container flex={2} jc={"center"} ai={"center"}>
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+              }}
+            >
+              Ish Jogee
+            </s.TextDescription>
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+              }}
+            >
+              Owner
+            </s.TextDescription>
+            </s.Container>
+          </s.Container>
+          <s.SpacerLarge />
+
+
+
+
+
+          <s.Container flex={2} jc={"center"} ai={"center"}>
+            <MediaStyledLink href={"https://twitter.com"}>
+              <MedStyledImg alt="Twitter" src="/config/images/example.png" />
+            </MediaStyledLink>
+            <s.SpacerLarge />
+            <s.Container flex={2} jc={"center"} ai={"center"}>
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+              }}
+            >
+              Callum Sidebottom
+            </s.TextDescription>
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+              }}
+            >
+              Lead Developer
+            </s.TextDescription>
+            </s.Container>
+          </s.Container>
+          <s.SpacerLarge />
+
+
+
+
+
+          <s.Container flex={2} jc={"center"} ai={"center"}>
+            <MediaStyledLink href={"https://twitter.com"}>
+              <MedStyledImg alt="Twitter" src="/config/images/example.png" />
+            </MediaStyledLink>
+            <s.SpacerLarge />
+            <s.Container flex={2} jc={"center"} ai={"center"}>
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+              }}
+            >
+              Naomi Pitt
+            </s.TextDescription>
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+              }}
+            >
+              Artist
+            </s.TextDescription>
+            </s.Container>
+          </s.Container>
+          <s.SpacerLarge />
+
+
+
+
+
+          <s.Container flex={2} jc={"center"} ai={"center"}>
+            <MediaStyledLink href={"https://twitter.com"}>
+              <MedStyledImg alt="Twitter" src="/config/images/example.png" />
+            </MediaStyledLink>
+            <s.SpacerLarge />
+            <s.Container flex={2} jc={"center"} ai={"center"}>
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+              }}
+            >
+              Luke Smith
+            </s.TextDescription>
+            <s.TextDescription
+              style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+              }}
+            >
+              Artist
+            </s.TextDescription>
+            </s.Container>
+          </s.Container>
+          <s.SpacerLarge />
+        </ResponsiveWrapper>
       </s.Container>
-    </s.Screen>
+    </s.Screen >
   );
 }
 
