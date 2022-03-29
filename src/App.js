@@ -256,7 +256,7 @@ function App() {
         <s.SpacerXSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg alt={"example"} src={"/config/images/Rat.png"} />
+            <StyledImg alt={"Example"} src={"/config/images/Rat.png"} />
           </s.Container>
           <s.SpacerLarge />
           <s.Container
@@ -297,7 +297,7 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  The sale has ended.
+                  Sold out.
                 </s.TextTitle>
                 <s.TextDescription
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
@@ -314,7 +314,7 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  Mint for {CONFIG.DISPLAY_COST} {CONFIG.NETWORK.SYMBOL} each.
+                  Mint for {CONFIG.DISPLAY_COST}{CONFIG.NETWORK.SYMBOL} each.
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
@@ -458,7 +458,7 @@ function App() {
           <s.SpacerLarge />
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg
-              alt={"example"}
+              alt={"Example"}
               src={"/config/images/Ox.png"}
               style={{ transform: "scaleX(-1)" }}
             />
@@ -488,22 +488,22 @@ function App() {
             </MediaStyledLink>
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
-            <s.TextDescription
-              style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-              }}
-            >
-              Ismail Jogee
-            </s.TextDescription>
-            <s.TextDescription
-              style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-              }}
-            >
-              Owner
-            </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                }}
+              >
+                Ismail Jogee
+              </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                }}
+              >
+                Owner
+              </s.TextDescription>
             </s.Container>
           </s.Container>
           <s.SpacerLarge />
@@ -518,22 +518,22 @@ function App() {
             </MediaStyledLink>
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
-            <s.TextDescription
-              style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-              }}
-            >
-              Callum Sidebottom
-            </s.TextDescription>
-            <s.TextDescription
-              style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-              }}
-            >
-              Lead Developer
-            </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                }}
+              >
+                Callum Sidebottom
+              </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                }}
+              >
+                Lead Developer
+              </s.TextDescription>
             </s.Container>
           </s.Container>
           <s.SpacerLarge />
@@ -548,22 +548,22 @@ function App() {
             </MediaStyledLink>
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
-            <s.TextDescription
-              style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-              }}
-            >
-              Naomi Pitt
-            </s.TextDescription>
-            <s.TextDescription
-              style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-              }}
-            >
-              Artist
-            </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                }}
+              >
+                Naomi Pitt
+              </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                }}
+              >
+                Artist
+              </s.TextDescription>
             </s.Container>
           </s.Container>
           <s.SpacerLarge />
@@ -578,22 +578,22 @@ function App() {
             </MediaStyledLink>
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
-            <s.TextDescription
-              style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-              }}
-            >
-              Luke Smith
-            </s.TextDescription>
-            <s.TextDescription
-              style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-              }}
-            >
-              Artist
-            </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                }}
+              >
+                Luke Smith
+              </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                }}
+              >
+                Artist
+              </s.TextDescription>
             </s.Container>
           </s.Container>
           <s.SpacerLarge />
