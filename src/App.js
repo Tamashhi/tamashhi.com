@@ -359,15 +359,15 @@ function App() {
                     ) : null}
                     <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <MediaStyledLink href={"https://twitter.com"}>
+                      <MediaStyledLink href={"https://twitter.com/Tamashhi"}>
                         <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href={"https://intsagram.com"}>
+                      <MediaStyledLink href={"https://www.instagram.com/tamashhiNFT/"}>
                         <SmallStyledImg alt="Instagram" src="/config/images/instagram.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href={"https://discord.com"}>
+                      <MediaStyledLink href={"https://discord.gg/cVn7EvyqM2"}>
                         <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
@@ -433,15 +433,15 @@ function App() {
                     </s.Container>
                     <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <MediaStyledLink href={"https://twitter.com"}>
+                      <MediaStyledLink href={"https://twitter.com/Tamashhi"}>
                         <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href={"https://intsagram.com"}>
+                      <MediaStyledLink href={"https://www.instagram.com/tamashhiNFT/"}>
                         <SmallStyledImg alt="Instagram" src="/config/images/instagram.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href={"https://discord.com"}>
+                      <MediaStyledLink href={"https://discord.gg/cVn7EvyqM2"}>
                         <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
