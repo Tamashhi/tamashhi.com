@@ -144,6 +144,8 @@ function NewTab(url) {
   win.focus();
 }
 
+
+
 function App() {
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
@@ -359,19 +361,19 @@ function App() {
                     ) : null}
                     <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <MediaStyledLink href={"https://twitter.com/Tamashhi"}>
+                      <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
                         <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href={"https://www.instagram.com/tamashhiNFT/"}>
+                      <MediaStyledLink href="https://www.instagram.com/tamashhiNFT/" target="_blank">
                         <SmallStyledImg alt="Instagram" src="/config/images/instagram.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href={"https://discord.gg/cVn7EvyqM2"}>
+                      <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
                         <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href={"https://opensea.io"}>
+                      <MediaStyledLink href="https://opensea.io" target="_blank">
                         <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
                       </MediaStyledLink>
                     </s.Container>
@@ -410,11 +412,9 @@ function App() {
                       <s.SpacerMedium />
                       <StyledRoundButton
                         disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          incrementMintAmount();
-                        }}
-                      >
+                        onClick={(e) => {e.preventDefault(); 
+                        incrementMintAmount();
+                        }}>
                         +
                       </StyledRoundButton>
                     </s.Container>
@@ -433,19 +433,19 @@ function App() {
                     </s.Container>
                     <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <MediaStyledLink href={"https://twitter.com/Tamashhi"}>
+                      <MediaStyledLink href="https://twitter.com/Tamashhi" target="_blank" >
                         <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href={"https://www.instagram.com/tamashhiNFT/"}>
+                      <MediaStyledLink href="https://www.instagram.com/tamashhiNFT/" target="_blank">
                         <SmallStyledImg alt="Instagram" src="/config/images/instagram.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href={"https://discord.gg/cVn7EvyqM2"}>
+                      <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
                         <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href={"https://opensea.io"}>
+                      <MediaStyledLink href="https://opensea.io" target="_blank">
                         <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
                       </MediaStyledLink>
                     </s.Container>
@@ -483,7 +483,7 @@ function App() {
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={2} jc={"center"} ai={"center"}>
-            <MediaStyledLink href={"https://twitter.com"}>
+            <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
             <s.SpacerLarge />
@@ -513,7 +513,7 @@ function App() {
 
 
           <s.Container flex={2} jc={"center"} ai={"center"}>
-            <MediaStyledLink href={"https://twitter.com"}>
+            <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
             <s.SpacerLarge />
@@ -543,7 +543,7 @@ function App() {
 
 
           <s.Container flex={2} jc={"center"} ai={"center"}>
-            <MediaStyledLink href={"https://twitter.com"}>
+            <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
             <s.SpacerLarge />
@@ -573,7 +573,7 @@ function App() {
 
 
           <s.Container flex={2} jc={"center"} ai={"center"}>
-            <MediaStyledLink href={"https://twitter.com"}>
+            <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
             <s.SpacerLarge />
