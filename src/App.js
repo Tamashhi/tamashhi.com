@@ -472,7 +472,7 @@ function App() {
           <s.TextDescription style={{
             textAlign: "center",
             color: "var(--secondary-text)",
-            fontSize: 50,
+            fontSize: 100,
           }}>
             About us
           </s.TextDescription>
@@ -482,7 +482,7 @@ function App() {
 
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={2} jc={"center"} ai={"center"}>
+          <s.Container flex={2} jc={"center"} ai={"center"} style={{backgroundColor: "var(--accent)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -504,6 +504,12 @@ function App() {
               >
                 Owner
               </s.TextDescription>
+              <s.TextDescription style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                }}>
+                  A couple sentences about yourself
+                </s.TextDescription>
             </s.Container>
           </s.Container>
           <s.SpacerLarge />
@@ -512,7 +518,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"}>
+          <s.Container flex={2} jc={"center"} ai={"center"} style={{backgroundColor: "var(--accent)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -542,7 +548,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"}>
+          <s.Container flex={2} jc={"center"} ai={"center"} style={{backgroundColor: "var(--accent)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -572,7 +578,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"}>
+          <s.Container flex={2} jc={"center"} ai={"center"} style={{backgroundColor: "var(--accent)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -601,105 +607,84 @@ function App() {
 
 
 
-        <s.SpacerLarge />
-        <s.Container flex={1} jc={"center"} ai={"center"}>
+        <s.SpacerLarge /><s.SpacerLarge/>
+        <s.Container flex={1} jc={"center"} ai={"center"} >
           <s.TextDescription style={{
             textAlign: "center",
             color: "var(--secondary-text)",
-            fontSize: 50,
+            fontSize: 100,
           }}>
             Roadmap
           </s.TextDescription>
         </s.Container>
-        <s.SpacerMedium />
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={1} jc={"center"} ai={"center"}>
-            <MedStyledImg alt={"Example"} src={"/config/images/Rat.png"} />
-          </s.Container>
-          <s.SpacerLarge />
-          <s.Container
-            flex={2}
-            jc={"center"}
-            ai={"center"}
-            style={{
-              backgroundColor: "var(--accent)",
-              padding: 24,
-              borderRadius: 24,
-              border: "4px  var(--secondary)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
-            }}
-          >
-            <s.TextTitle style={{ color: "var(--accent-text)" }}>
+          <s.SpacerMedium/>
+          <s.TextTitle style={{fontSize:40, color: "var(--accent-text)" }}>
               Phase 1
             </s.TextTitle>
-            <s.TextDescription style={{ color: "var(--accent-text)" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-               Praesent sit amet risus felis. Ut mollis mollis odio, 
-               interdum consequat nunc malesuada in. Nulla quis finibus 
-               leo, vitae ultrices felis. Nunc sit amet consequat nunc, et 
-               finibus massa. Curabitur facilisis aliquam leo.
-            </s.TextDescription>
-        </s.Container>
-        </ResponsiveWrapper>
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-
-          <s.SpacerLarge />
           <s.Container
             flex={2}
             jc={"center"}
             ai={"center"}
             style={{
+              width: 500,
               backgroundColor: "var(--accent)",
               padding: 24,
-              borderRadius: 24,
+              borderRadius: 50,
               border: "4px  var(--secondary)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
-            <s.TextTitle style={{ color: "var(--accent-text)" }}>
+            
+            <s.TextDescription style={{fontSize:20, color: "var(--accent-text)" }}>
+              Release the original Tamashhi collection
+            </s.TextDescription>
+        </s.Container>
+        <s.SpacerMedium/>
+          <s.TextTitle style={{fontSize:40, color: "var(--accent-text)" }}>
               Phase 2
             </s.TextTitle>
-            <s.TextDescription style={{ color: "var(--accent-text)" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-               Praesent sit amet risus felis. Ut mollis mollis odio, 
-               interdum consequat nunc malesuada in. Nulla quis finibus 
-               leo, vitae ultrices felis. Nunc sit amet consequat nunc, et 
-               finibus massa. Curabitur facilisis aliquam leo.
-            </s.TextDescription>
-        </s.Container>
-        <s.Container flex={1} jc={"center"} ai={"center"}>
-            <MedStyledImg alt={"Example"} src={"/config/images/Rat.png"} style={{ transform: "scaleX(-1)" }} />
-          </s.Container>
-        </ResponsiveWrapper>
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={1} jc={"center"} ai={"center"}>
-            <MedStyledImg flex={2} alt={"Example"} src={"/config/images/Rat.png"} />
-          </s.Container>
-          <s.SpacerLarge />
           <s.Container
             flex={2}
             jc={"center"}
             ai={"center"}
             style={{
+              width: 500,
               backgroundColor: "var(--accent)",
               padding: 24,
-              borderRadius: 24,
+              borderRadius: 50,
               border: "4px  var(--secondary)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
-            <s.TextTitle style={{ color: "var(--accent-text)" }}>
-              Phase 3
-            </s.TextTitle>
-            <s.TextDescription style={{ color: "var(--accent-text)" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-               Praesent sit amet risus felis. Ut mollis mollis odio, 
-               interdum consequat nunc malesuada in. Nulla quis finibus 
-               leo, vitae ultrices felis. Nunc sit amet consequat nunc, et 
-               finibus massa. Curabitur facilisis aliquam leo.
+            
+            <s.TextDescription style={{fontSize:20, color: "var(--accent-text)" }}>
+              Coming Soon
             </s.TextDescription>
         </s.Container>
-        </ResponsiveWrapper>
+
+
+          <s.SpacerMedium/>
+          <s.TextTitle style={{fontSize:40, color: "var(--accent-text)" }}>
+              Phase 3
+            </s.TextTitle>
+          <s.Container
+            flex={2}
+            jc={"center"}
+            ai={"center"}
+            style={{
+              width: 500,
+              backgroundColor: "var(--accent)",
+              padding: 24,
+              borderRadius: 50,
+              border: "4px  var(--secondary)",
+              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
+            }}
+          >
+            
+            <s.TextDescription style={{fontSize:20, color: "var(--accent-text)" }}>
+              Coming Soon
+            </s.TextDescription>
+        </s.Container>
       </s.Container>
     </s.Screen >
   );
