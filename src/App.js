@@ -606,7 +606,7 @@ function App() {
         </ResponsiveWrapper>
 
 
-
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
         <s.SpacerLarge />
         <s.Container flex={1} jc={"center"} ai={"center"}>
           <s.TextDescription style={{
@@ -618,7 +618,7 @@ function App() {
           </s.TextDescription>
         </s.Container>
         <s.SpacerMedium />
-
+        </ResponsiveWrapper>
         
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
