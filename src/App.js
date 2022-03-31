@@ -119,12 +119,12 @@ export const MedStyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
   background-color: var(--accent);
   border-radius: 100%;
-  width: 150px;
+  width: 200px;
   @media (min-width: 900px) {
-    width: 150px;
+    width: 200px;
   }
   @media (min-width: 1000px) {
-    width: 150px;
+    width: 200px;
   }
   transition: width 0.5s;
 `;
@@ -532,7 +532,7 @@ function App() {
                   color: "var(--secondary-text)",
                 }}
               >
-                Lead Developer
+                Developer
               </s.TextDescription>
             </s.Container>
           </s.Container>
@@ -597,6 +597,108 @@ function App() {
             </s.Container>
           </s.Container>
           <s.SpacerLarge />
+        </ResponsiveWrapper>
+
+
+
+        <s.SpacerLarge />
+        <s.Container flex={1} jc={"center"} ai={"center"}>
+          <s.TextDescription style={{
+            textAlign: "center",
+            color: "var(--secondary-text)",
+            fontSize: 50,
+          }}>
+            Roadmap
+          </s.TextDescription>
+        </s.Container>
+        <s.SpacerMedium />
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+          <s.Container flex={1} jc={"center"} ai={"center"}>
+            <MedStyledImg alt={"Example"} src={"/config/images/Rat.png"} />
+          </s.Container>
+          <s.SpacerLarge />
+          <s.Container
+            flex={2}
+            jc={"center"}
+            ai={"center"}
+            style={{
+              backgroundColor: "var(--accent)",
+              padding: 24,
+              borderRadius: 24,
+              border: "4px  var(--secondary)",
+              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
+            }}
+          >
+            <s.TextTitle style={{ color: "var(--accent-text)" }}>
+              Phase 1
+            </s.TextTitle>
+            <s.TextDescription style={{ color: "var(--accent-text)" }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               Praesent sit amet risus felis. Ut mollis mollis odio, 
+               interdum consequat nunc malesuada in. Nulla quis finibus 
+               leo, vitae ultrices felis. Nunc sit amet consequat nunc, et 
+               finibus massa. Curabitur facilisis aliquam leo.
+            </s.TextDescription>
+        </s.Container>
+        </ResponsiveWrapper>
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+
+          <s.SpacerLarge />
+          <s.Container
+            flex={2}
+            jc={"center"}
+            ai={"center"}
+            style={{
+              backgroundColor: "var(--accent)",
+              padding: 24,
+              borderRadius: 24,
+              border: "4px  var(--secondary)",
+              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
+            }}
+          >
+            <s.TextTitle style={{ color: "var(--accent-text)" }}>
+              Phase 2
+            </s.TextTitle>
+            <s.TextDescription style={{ color: "var(--accent-text)" }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               Praesent sit amet risus felis. Ut mollis mollis odio, 
+               interdum consequat nunc malesuada in. Nulla quis finibus 
+               leo, vitae ultrices felis. Nunc sit amet consequat nunc, et 
+               finibus massa. Curabitur facilisis aliquam leo.
+            </s.TextDescription>
+        </s.Container>
+        <s.Container flex={1} jc={"center"} ai={"center"}>
+            <MedStyledImg alt={"Example"} src={"/config/images/Rat.png"} style={{ transform: "scaleX(-1)" }} />
+          </s.Container>
+        </ResponsiveWrapper>
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+          <s.Container flex={1} jc={"center"} ai={"center"}>
+            <MedStyledImg flex={2} alt={"Example"} src={"/config/images/Rat.png"} />
+          </s.Container>
+          <s.SpacerLarge />
+          <s.Container
+            flex={2}
+            jc={"center"}
+            ai={"center"}
+            style={{
+              backgroundColor: "var(--accent)",
+              padding: 24,
+              borderRadius: 24,
+              border: "4px  var(--secondary)",
+              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
+            }}
+          >
+            <s.TextTitle style={{ color: "var(--accent-text)" }}>
+              Phase 3
+            </s.TextTitle>
+            <s.TextDescription style={{ color: "var(--accent-text)" }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               Praesent sit amet risus felis. Ut mollis mollis odio, 
+               interdum consequat nunc malesuada in. Nulla quis finibus 
+               leo, vitae ultrices felis. Nunc sit amet consequat nunc, et 
+               finibus massa. Curabitur facilisis aliquam leo.
+            </s.TextDescription>
+        </s.Container>
         </ResponsiveWrapper>
       </s.Container>
     </s.Screen >
