@@ -275,7 +275,7 @@ function App() {
         flex={1}
         ai={"center"}
         style={{ padding: 24, backgroundColor: "var(--primary)" }}
-        image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg2.png" : null}
+        image={CONFIG.SHOW_BACKGROUND ? "/config/images/background.png" : null}
       >
         <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
           <s.SpacerLarge/><s.SpacerLarge/>
