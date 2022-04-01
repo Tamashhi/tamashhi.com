@@ -128,6 +128,29 @@ export const MedStyledImg = styled.img`
   }
   transition: width 0.5s;
 `;
+export const TransparentStyledLogo = styled.img`
+  width: 200px;
+  @media (min-width: 900px) {
+    width: 250px;
+  }
+  @media (min-width: 1000px) {
+    width: 300px;
+  }
+`;
+export const RMStyledImg = styled.img`
+  box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
+  border: 4px  var(--secondary);
+  background-color: var(--accent);
+  border-radius: 10%;
+  width: 200px;
+  @media (min-width: 900px) {
+    width: 250px;
+  }
+  @media (min-width: 1000px) {
+    width: 300px;
+  }
+  transition: width 0.5s;
+`;
 export const MediaStyledLink = styled.a`
   color: var(--secondary);
   text-decoration: none;
@@ -254,7 +277,11 @@ function App() {
         style={{ padding: 24, backgroundColor: "var(--primary)" }}
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg2.png" : null}
       >
-        <StyledLogo alt={"logo"} src={"/config/images/Dragon.png"} />
+        <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+          <s.SpacerLarge/><s.SpacerLarge/>
+        <TransparentStyledLogo alt={"logo"} src={"/config/images/logo.png"} />
+        </s.Container>
+
         <s.SpacerXSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
@@ -622,7 +649,7 @@ function App() {
         
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <MedStyledImg alt={"Example"} src={"/config/images/Rat.png"} />
+            <RMStyledImg alt={"Example"} src={"/config/images/Rat.png"} />
           </s.Container>
           <s.Container
             flex={2}
@@ -668,7 +695,7 @@ function App() {
             </s.TextDescription>
         </s.Container>
         <s.Container flex={1} jc={"center"} ai={"center"}>
-            <MedStyledImg alt={"Example"} src={"/config/images/Rat.png"} style={{ transform: "scaleX(-1)" }} />
+            <RMStyledImg alt={"Example"} src={"/config/images/Rat.png"} style={{ transform: "scaleX(-1)" }} />
           </s.Container>
         </ResponsiveWrapper>
 
@@ -676,7 +703,7 @@ function App() {
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <MedStyledImg flex={2} alt={"Example"} src={"/config/images/Rat.png"} />
+            <RMStyledImg flex={2} alt={"Example"} src={"/config/images/Rat.png"} />
           </s.Container>
           <s.Container
             flex={2}
