@@ -269,7 +269,7 @@ function App() {
     getData();
   }, [blockchain.account]);
 
-  return (
+  return (   
     <s.Screen>
       <s.Container
         flex={1}
@@ -278,8 +278,8 @@ function App() {
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/background.png" : null}
       >
         <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-          <s.SpacerLarge/><s.SpacerLarge/>
-        <TransparentStyledLogo alt={"logo"} src={"/config/images/logo.png"} />
+          <s.SpacerLarge />
+          <TransparentStyledLogo alt={"logo"} src={"/config/images/logoShiny.png"} />
         </s.Container>
 
         <s.SpacerXSmall />
@@ -293,10 +293,9 @@ function App() {
             jc={"center"}
             ai={"center"}
             style={{
-              backgroundColor: "var(--accent)",
               padding: 24,
               borderRadius: 24,
-              border: "4px  var(--secondary)",
+              border: "2px solid var(--border)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
@@ -439,8 +438,9 @@ function App() {
                       <s.SpacerMedium />
                       <StyledRoundButton
                         disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {e.preventDefault(); 
-                        incrementMintAmount();
+                        onClick={(e) => {
+                          e.preventDefault();
+                          incrementMintAmount();
                         }}>
                         +
                       </StyledRoundButton>
@@ -509,7 +509,7 @@ function App() {
 
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={2} jc={"center"} ai={"center"} style={{backgroundColor: "var(--accent)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} style={{borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -532,11 +532,11 @@ function App() {
                 Owner
               </s.TextDescription>
               <s.TextDescription style={{
-                  textAlign: "center",
-                  color: "var(--secondary-text)",
-                }}>
-                  A couple sentences about yourself
-                </s.TextDescription>
+                textAlign: "center",
+                color: "var(--secondary-text)",
+              }}>
+                A couple sentences about yourself
+              </s.TextDescription>
             </s.Container>
           </s.Container>
           <s.SpacerLarge />
@@ -545,7 +545,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"} style={{backgroundColor: "var(--accent)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} style={{border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -575,7 +575,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"} style={{backgroundColor: "var(--accent)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} style={{ border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -605,7 +605,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"} style={{backgroundColor: "var(--accent)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} style={{ border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -634,19 +634,19 @@ function App() {
 
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-        <s.SpacerLarge />
-        <s.Container flex={1} jc={"center"} ai={"center"}>
-          <s.TextDescription style={{
-            textAlign: "center",
-            color: "var(--secondary-text)",
-            fontSize: 100,
-          }}>
-            Roadmap
-          </s.TextDescription>
-        </s.Container>
-        <s.SpacerMedium />
+          <s.SpacerLarge />
+          <s.Container flex={1} jc={"center"} ai={"center"}>
+            <s.TextDescription style={{
+              textAlign: "center",
+              color: "var(--secondary-text)",
+              fontSize: 100,
+            }}>
+              Roadmap
+            </s.TextDescription>
+          </s.Container>
+          <s.SpacerMedium />
         </ResponsiveWrapper>
-        
+
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <RMStyledImg alt={"Example"} src={"/config/images/Rat.png"} />
@@ -656,45 +656,45 @@ function App() {
             jc={"center"}
             ai={"center"}
             style={{
-              backgroundColor: "var(--accent)",
               padding: 24,
               borderRadius: 24,
-              border: "4px  var(--secondary)",
+              border: "2px solid var(--border)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
-            <s.TextTitle style={{fontSize:40, color: "var(--accent-text)" }}>
+            <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
               Phase 1
             </s.TextTitle>
-            <s.SpacerMedium/>
-            <s.TextDescription style={{fontSize:20, color: "var(--accent-text)" }}>
+            <s.SpacerMedium />
+            <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
               Release the original Tamashhi collection.
             </s.TextDescription>
-        </s.Container>
+          </s.Container>
+          <s.SpacerLarge/><s.SpacerXSmall/>
         </ResponsiveWrapper>
 
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+        <s.SpacerLarge/>
           <s.Container
             flex={2}
             jc={"center"}
             ai={"center"}
             style={{
-              backgroundColor: "var(--accent)",
               padding: 24,
               borderRadius: 24,
-              border: "4px  var(--secondary)",
+              border: "2px solid var(--border)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
-            <s.TextTitle style={{fontSize:40, color: "var(--accent-text)" }}>
+            <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
               Phase 2
             </s.TextTitle>
-            <s.TextDescription style={{fontSize:20, color: "var(--accent-text)" }}>
+            <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
               Coming Soon
             </s.TextDescription>
-        </s.Container>
-        <s.Container flex={1} jc={"center"} ai={"center"}>
+          </s.Container>
+          <s.Container flex={1} jc={"center"} ai={"center"}>
             <RMStyledImg alt={"Example"} src={"/config/images/Rat.png"} style={{ transform: "scaleX(-1)" }} />
           </s.Container>
         </ResponsiveWrapper>
@@ -710,20 +710,20 @@ function App() {
             jc={"center"}
             ai={"center"}
             style={{
-              backgroundColor: "var(--accent)",
               padding: 24,
               borderRadius: 24,
-              border: "4px  var(--secondary)",
+              border: "2px solid var(--border)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
-            <s.TextTitle style={{fontSize:40, color: "var(--accent-text)" }}>
+            <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
               Phase 3
             </s.TextTitle>
-            <s.TextDescription style={{fontSize:20, color: "var(--accent-text)" }}>
+            <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
               Coming Soon
             </s.TextDescription>
-        </s.Container>
+          </s.Container>
+          <s.SpacerLarge/><s.SpacerXSmall/>
         </ResponsiveWrapper>
 
 
