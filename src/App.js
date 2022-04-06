@@ -32,7 +32,7 @@ export const StyledRoundButton = styled.button`
   padding: 10px;
   border-radius: 100%;
   border: none;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   padding: 10px;
   font-weight: bold;
   font-size: 15px;
@@ -137,17 +137,39 @@ export const TransparentStyledLogo = styled.img`
     width: 300px;
   }
 `;
+export const SmallTranStyledLogo = styled.img`
+  width: 100px;
+  @media (min-width: 900px) {
+    width: 10px;
+  }
+  @media (min-width: 1000px) {
+    width: 100px;
+  }
+`;
 export const RMStyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
   border: 4px  var(--secondary);
   background-color: var(--accent);
   border-radius: 10%;
-  width: 200px;
+  width: 50px;
   @media (min-width: 900px) {
-    width: 250px;
+    width: 100px;
   }
   @media (min-width: 1000px) {
-    width: 300px;
+    width: 150px;
+  }
+  transition: width 0.5s;
+`;
+export const TallRMStyledImg = styled.img`
+  box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--border);
+  border-radius: 100px;
+  width: 50px;
+  @media (min-width: 900px) {
+    width: 50px;
+  }
+  @media (min-width: 1000px) {
+    width: 50px;
   }
   transition: width 0.5s;
 `;
@@ -269,52 +291,53 @@ function App() {
     getData();
   }, [blockchain.account]);
 
-  return (   
+  return (
     <s.Screen>
       <s.Container
         flex={1}
         ai={"center"}
         style={{ padding: 24, backgroundColor: "var(--primary)" }}
-        image={CONFIG.SHOW_BACKGROUND ? "/config/images/background.png" : null}
-      >
+        image={CONFIG.SHOW_BACKGROUND ? "/config/images/back.png" : null}>
+
+
         <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
           <s.SpacerLarge />
           <TransparentStyledLogo alt={"logo"} src={"/config/images/logoShiny.png"} />
         </s.Container>
+
 
         <s.SpacerXSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg alt={"Example"} src={"/config/images/Rat.png"} />
           </s.Container>
+
           <s.SpacerLarge />
           <s.Container
             flex={2}
             jc={"center"}
             ai={"center"}
+            image={"/config/images/background.png"}
             style={{
               padding: 24,
               borderRadius: 24,
               border: "2px solid var(--border)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
-            }}
-          >
+              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+            }}>
             <s.TextTitle
               style={{
                 textAlign: "center",
                 fontSize: 50,
                 fontWeight: "bold",
-                color: "var(--accent-text)",
-              }}
-            >
+                color: "var(--accent-text)"
+              }}>
               {data.totalSupply} / {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             <s.TextDescription
               style={{
                 textAlign: "center",
-                color: "var(--primary-text)",
-              }}
-            >
+                color: "var(--primary-text)"
+              }}>
               <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
                 {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
               </StyledLink>
@@ -323,13 +346,11 @@ function App() {
             {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
               <>
                 <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
-                >
+                  style={{ textAlign: "center", color: "var(--accent-text)" }}>
                   Sold out.
                 </s.TextTitle>
                 <s.TextDescription
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
-                >
+                  style={{ textAlign: "center", color: "var(--accent-text)" }}>
                   You can still find {CONFIG.NFT_NAME} on
                 </s.TextDescription>
                 <s.SpacerSmall />
@@ -346,8 +367,7 @@ function App() {
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
-                >
+                  style={{ textAlign: "center", color: "var(--accent-text)" }}>
                   Plus reduced gas fees for multiple mints!
                 </s.TextDescription>
                 <s.SpacerSmall />
@@ -357,9 +377,8 @@ function App() {
                     <s.TextDescription
                       style={{
                         textAlign: "center",
-                        color: "var(--accent-text)",
-                      }}
-                    >
+                        color: "var(--accent-text)"
+                      }}>
                       Connect your MetaMask wallet
                     </s.TextDescription>
                     <s.SpacerSmall />
@@ -368,8 +387,7 @@ function App() {
                         e.preventDefault();
                         dispatch(connect());
                         getData();
-                      }}
-                    >
+                      }}>
                       CONNECT
                     </StyledButton>
                     {blockchain.errorMsg !== "" ? (
@@ -378,13 +396,14 @@ function App() {
                         <s.TextDescription
                           style={{
                             textAlign: "center",
-                            color: "var(--accent-text)",
-                          }}
-                        >
+                            color: "var(--accent-text)"
+                          }}>
                           {blockchain.errorMsg}
                         </s.TextDescription>
                       </>
                     ) : null}
+
+
                     <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
@@ -409,9 +428,8 @@ function App() {
                     <s.TextDescription
                       style={{
                         textAlign: "center",
-                        color: "var(--accent-text)",
-                      }}
-                    >
+                        color: "var(--accent-text)"
+                      }}>
                       {feedback}
                     </s.TextDescription>
                     <s.SpacerMedium />
@@ -422,17 +440,15 @@ function App() {
                         onClick={(e) => {
                           e.preventDefault();
                           decrementMintAmount();
-                        }}
-                      >
+                        }}>
                         -
                       </StyledRoundButton>
                       <s.SpacerMedium />
                       <s.TextDescription
                         style={{
                           textAlign: "center",
-                          color: "var(--accent-text)",
-                        }}
-                      >
+                          color: "var(--accent-text)"
+                        }}>
                         {mintAmount}
                       </s.TextDescription>
                       <s.SpacerMedium />
@@ -453,11 +469,12 @@ function App() {
                           e.preventDefault();
                           claimNFTs();
                           getData();
-                        }}
-                      >
+                        }}>
                         {claimingNft ? "BUSY" : "BUY"}
                       </StyledButton>
                     </s.Container>
+
+
                     <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <MediaStyledLink href="https://twitter.com/Tamashhi" target="_blank" >
@@ -495,21 +512,23 @@ function App() {
 
         <s.SpacerMedium />
         <s.SpacerLarge />
-        <s.Container flex={1} jc={"center"} ai={"center"}>
+        <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+          <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
           <s.TextDescription style={{
             textAlign: "center",
             color: "var(--secondary-text)",
-            fontSize: 100,
+            fontSize: 100
           }}>
             About us
           </s.TextDescription>
+          <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
         </s.Container>
         <s.SpacerMedium />
 
 
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={2} jc={"center"} ai={"center"} style={{borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -518,22 +537,51 @@ function App() {
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)",
-                }}
-              >
+                  color: "var(--secondary-text)"
+                }}>
                 Ismail Jogee
               </s.TextDescription>
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)",
-                }}
-              >
+                  color: "var(--secondary-text)"
+                }}>
                 Owner
               </s.TextDescription>
               <s.TextDescription style={{
                 textAlign: "center",
-                color: "var(--secondary-text)",
+                color: "var(--secondary-text)"
+              }}>
+                A couple sentences about yourself
+              </s.TextDescription>
+            </s.Container>
+          </s.Container>
+          <s.SpacerLarge />
+
+
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+            <MediaStyledLink href="https://twitter.com" target="_blank">
+              <MedStyledImg alt="Twitter" src="/config/images/example.png" />
+            </MediaStyledLink>
+            <s.SpacerLarge />
+            <s.Container flex={2} jc={"center"} ai={"center"}>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)"
+                }}>
+                Callum Sidebottom
+              </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)"
+                }}>
+                Developer
+              </s.TextDescription>
+              <s.TextDescription style={{
+                textAlign: "center",
+                color: "var(--secondary-text)"
               }}>
                 A couple sentences about yourself
               </s.TextDescription>
@@ -545,7 +593,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"} style={{border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -554,48 +602,22 @@ function App() {
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)",
-                }}
-              >
-                Callum Sidebottom
-              </s.TextDescription>
-              <s.TextDescription
-                style={{
-                  textAlign: "center",
-                  color: "var(--secondary-text)",
-                }}
-              >
-                Developer
-              </s.TextDescription>
-            </s.Container>
-          </s.Container>
-          <s.SpacerLarge />
-
-
-
-
-
-          <s.Container flex={2} jc={"center"} ai={"center"} style={{ border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-            <MediaStyledLink href="https://twitter.com" target="_blank">
-              <MedStyledImg alt="Twitter" src="/config/images/example.png" />
-            </MediaStyledLink>
-            <s.SpacerLarge />
-            <s.Container flex={2} jc={"center"} ai={"center"}>
-              <s.TextDescription
-                style={{
-                  textAlign: "center",
-                  color: "var(--secondary-text)",
-                }}
-              >
+                  color: "var(--secondary-text)"
+                }}>
                 Naomi Pitt
               </s.TextDescription>
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)",
-                }}
-              >
+                  color: "var(--secondary-text)"
+                }}>
                 Artist
+              </s.TextDescription>
+              <s.TextDescription style={{
+                textAlign: "center",
+                color: "var(--secondary-text)"
+              }}>
+                A couple sentences about yourself
               </s.TextDescription>
             </s.Container>
           </s.Container>
@@ -605,7 +627,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"} style={{ border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -614,18 +636,22 @@ function App() {
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)",
-                }}
-              >
+                  color: "var(--secondary-text)"
+                }}>
                 Luke Smith
               </s.TextDescription>
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)",
-                }}
-              >
+                  color: "var(--secondary-text)"
+                }}>
                 Artist
+              </s.TextDescription>
+              <s.TextDescription style={{
+                textAlign: "center",
+                color: "var(--secondary-text)"
+              }}>
+                A couple sentences about yourself
               </s.TextDescription>
             </s.Container>
           </s.Container>
@@ -635,14 +661,146 @@ function App() {
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.SpacerLarge />
-          <s.Container flex={1} jc={"center"} ai={"center"}>
+          <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
             <s.TextDescription style={{
               textAlign: "center",
               color: "var(--secondary-text)",
-              fontSize: 100,
+              fontSize: 100
             }}>
               Roadmap
             </s.TextDescription>
+            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
+          </s.Container>
+          <s.SpacerMedium />
+        </ResponsiveWrapper>
+
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+          <s.Container flex={1} jc={"center"} ai={"center"}>
+            <TallRMStyledImg alt={"Example"} src={"/config/images/Roadmap.png"} />
+          </s.Container>
+          <s.Container flex={3} jc={"center"} ai={"center"}>
+            <s.Container
+              flex={1}
+              jc={"center"}
+              ai={"center"}
+              image={"/config/images/background.png"}
+              style={{
+                padding: 24,
+                borderRadius: 24,
+                border: "2px solid var(--border)",
+                boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+              }}>
+              <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
+                Phase 1
+              </s.TextTitle>
+              <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
+                Coming soon.
+              </s.TextDescription>
+            </s.Container>
+
+
+            <s.SpacerLarge/>
+            <s.Container
+              flex={1}
+              jc={"center"}
+              ai={"center"}
+              image={"/config/images/background.png"}
+              style={{
+                padding: 24,
+                borderRadius: 24,
+                border: "2px solid var(--border)",
+                boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+              }}>
+              <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
+                Phase 2
+              </s.TextTitle>
+              <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
+                Coming soon.
+              </s.TextDescription>
+            </s.Container>
+
+
+            <s.SpacerLarge/>
+            <s.Container
+              flex={1}
+              jc={"center"}
+              ai={"center"}
+              image={"/config/images/background.png"}
+              style={{
+                padding: 24,
+                borderRadius: 24,
+                border: "2px solid var(--border)",
+                boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+              }}>
+              <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
+                Phase 3
+              </s.TextTitle>
+              <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
+                Coming soon.
+              </s.TextDescription>
+            </s.Container>
+
+
+            <s.SpacerLarge/>
+            <s.Container
+              flex={1}
+              jc={"center"}
+              ai={"center"}
+              image={"/config/images/background.png"}
+              style={{
+                padding: 24,
+                borderRadius: 24,
+                border: "2px solid var(--border)",
+                boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+              }}>
+              <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
+                Phase 4
+              </s.TextTitle>
+              <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
+                Coming soon.
+              </s.TextDescription>
+            </s.Container>
+
+
+            <s.SpacerLarge/>
+            <s.Container
+              flex={1}
+              jc={"center"}
+              ai={"center"}
+              image={"/config/images/background.png"}
+              style={{
+                padding: 24,
+                borderRadius: 24,
+                border: "2px solid var(--border)",
+                boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+              }}>
+              <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
+                Phase 5
+              </s.TextTitle>
+              <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
+                Coming soon.
+              </s.TextDescription>
+            </s.Container>
+          </s.Container>
+        </ResponsiveWrapper>
+
+
+
+
+        <s.SpacerLarge /><s.SpacerXSmall />
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+          <s.SpacerLarge />
+          <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
+            <s.TextDescription style={{
+              textAlign: "center",
+              color: "var(--secondary-text)",
+              fontSize: 100
+            }}>
+              Roadmap
+            </s.TextDescription>
+            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
           </s.Container>
           <s.SpacerMedium />
         </ResponsiveWrapper>
@@ -659,23 +817,23 @@ function App() {
               padding: 24,
               borderRadius: 24,
               border: "2px solid var(--border)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
-            }}
-          >
+              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+            }}>
             <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
               Phase 1
             </s.TextTitle>
-            <s.SpacerMedium />
             <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
-              Release the original Tamashhi collection.
+              Coming soon.
             </s.TextDescription>
           </s.Container>
-          <s.SpacerLarge/><s.SpacerXSmall/>
+          <s.SpacerLarge /><s.SpacerXSmall />
         </ResponsiveWrapper>
 
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-        <s.SpacerLarge/>
+          <s.Container flex={1} jc={"center"} ai={"center"}>
+            <RMStyledImg alt={"Example"} src={"/config/images/Rat.png"} />
+          </s.Container>
           <s.Container
             flex={2}
             jc={"center"}
@@ -684,9 +842,8 @@ function App() {
               padding: 24,
               borderRadius: 24,
               border: "2px solid var(--border)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
-            }}
-          >
+              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+            }}>
             <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
               Phase 2
             </s.TextTitle>
@@ -694,9 +851,7 @@ function App() {
               Coming Soon
             </s.TextDescription>
           </s.Container>
-          <s.Container flex={1} jc={"center"} ai={"center"}>
-            <RMStyledImg alt={"Example"} src={"/config/images/Rat.png"} style={{ transform: "scaleX(-1)" }} />
-          </s.Container>
+          <s.SpacerLarge /><s.SpacerXSmall />
         </ResponsiveWrapper>
 
 
@@ -713,9 +868,8 @@ function App() {
               padding: 24,
               borderRadius: 24,
               border: "2px solid var(--border)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
-            }}
-          >
+              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+            }}>
             <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
               Phase 3
             </s.TextTitle>
@@ -723,9 +877,8 @@ function App() {
               Coming Soon
             </s.TextDescription>
           </s.Container>
-          <s.SpacerLarge/><s.SpacerXSmall/>
+          <s.SpacerLarge /><s.SpacerXSmall />
         </ResponsiveWrapper>
-
 
       </s.Container>
     </s.Screen >
