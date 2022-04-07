@@ -319,6 +319,7 @@ function App() {
             ai={"center"}
             image={"/config/images/background.png"}
             style={{
+              backgroundColor: "var(--primary)",
               padding: 24,
               borderRadius: 24,
               border: "2px solid var(--border)",
@@ -528,7 +529,7 @@ function App() {
 
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{backgroundColor: "var(--primary)", borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -559,7 +560,7 @@ function App() {
           <s.SpacerLarge />
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -593,7 +594,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -627,7 +628,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -686,6 +687,7 @@ function App() {
               ai={"center"}
               image={"/config/images/background.png"}
               style={{
+                backgroundColor: "var(--primary)",
                 padding: 24,
                 borderRadius: 24,
                 border: "2px solid var(--border)",
@@ -707,6 +709,7 @@ function App() {
               ai={"center"}
               image={"/config/images/background.png"}
               style={{
+                backgroundColor: "var(--primary)",
                 padding: 24,
                 borderRadius: 24,
                 border: "2px solid var(--border)",
@@ -728,6 +731,7 @@ function App() {
               ai={"center"}
               image={"/config/images/background.png"}
               style={{
+                backgroundColor: "var(--primary)",
                 padding: 24,
                 borderRadius: 24,
                 border: "2px solid var(--border)",
@@ -749,6 +753,7 @@ function App() {
               ai={"center"}
               image={"/config/images/background.png"}
               style={{
+                backgroundColor: "var(--primary)",
                 padding: 24,
                 borderRadius: 24,
                 border: "2px solid var(--border)",
@@ -770,6 +775,7 @@ function App() {
               ai={"center"}
               image={"/config/images/background.png"}
               style={{
+                backgroundColor: "var(--primary)",
                 padding: 24,
                 borderRadius: 24,
                 border: "2px solid var(--border)",
