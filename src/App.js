@@ -664,7 +664,7 @@ function App() {
                 textAlign: "center",
                 color: "var(--secondary-text)"
               }}>
-                A couple sentences about yourselfg
+                A couple sentences about yourself
               </s.TextDescription>
             </s.Container>
           </s.Container>
