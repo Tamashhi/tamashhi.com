@@ -520,24 +520,60 @@ function App() {
             color: "var(--secondary-text)",
             fontSize: 100
           }}>
-            About us
+            The Tale of Tamashhi
           </s.TextDescription>
           <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
         </s.Container>
         <s.SpacerMedium />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+            <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+              <TransparentStyledLogo alt={"Example"} src={"/config/images/logoShiny.png"} />
+              <s.TextDescription
+                style={{
+                  fontSize: 20,
+                  textAlign: "center",
+                  color: "var(--secondary-text)"
+                }}>
+                Our tale starts in the distant past in the land known as [name], a being known as Lord Tamashhi
+                has just split his own soul into 10,000 pieces, spreading them throughout the population creating
+                a new race of people that would be known as Tamashhi while Lord Tamashhi enters into a slumber.
+                Shunned by society, Tamashhi establish their own village away from the humans. After ??? years of conflict, Lord
+                Tamashhi awakens from his slumber and begins to teach Tamashhi how to harness the Lord's power of soul
+                manipulation. With Tamashhi gaining the upper hand in the confilct, the leaders of each village sit down with each other
+                in order to establish peace between the villages.
+              </s.TextDescription>
+              
+            </s.Container>
+            <s.SpacerMedium/>
+            <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+              <s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
             <s.TextDescription
-              style={{
-                fontSize: 20,
-                textAlign: "center",
-                color: "var(--secondary-text)"
-              }}>
-                Introduction to the story we want to tell
-            </s.TextDescription>
+                style={{
+                  fontSize: 20,
+                  textAlign: "center",
+                  color: "var(--secondary-text)"
+                }}>
+              This begins the era of Peace.
+              </s.TextDescription>
+            </s.Container>
+            <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+              <TransparentStyledLogo alt={"Example"} src={"/config/images/unknown.png"} />
+
+              <s.TextDescription
+                style={{
+                  fontSize: 20,
+                  textAlign: "center",
+                  color: "var(--secondary-text)"
+                }}>
+                However, a small faction of people don't trust Tamashhi and believe that Lord Tamashhi is hiding
+                a dark past. This faction sends out a small group on a journey to discover the truth, sending
+                encrypted messages back to the rest of the faction with information they've learnt. As a Tamashhi
+                it is your job to intercept these messages to figure out what Lord Tamashhi is hiding from you.
+              </s.TextDescription>
+            </s.Container>
           </s.Container>
         </ResponsiveWrapper>
-
 
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
