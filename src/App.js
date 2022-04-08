@@ -525,11 +525,23 @@ function App() {
           <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
         </s.Container>
         <s.SpacerMedium />
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+          <s.Container flex={1} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+            <s.TextDescription
+              style={{
+                fontSize: 20,
+                textAlign: "center",
+                color: "var(--secondary-text)"
+              }}>
+                Introduction to the story we want to tell
+            </s.TextDescription>
+          </s.Container>
+        </ResponsiveWrapper>
 
 
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{backgroundColor: "var(--primary)", borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -560,7 +572,7 @@ function App() {
           <s.SpacerLarge />
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -594,7 +606,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -628,7 +640,7 @@ function App() {
 
 
 
-          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
             <MediaStyledLink href="https://twitter.com" target="_blank">
               <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             </MediaStyledLink>
@@ -656,9 +668,7 @@ function App() {
               </s.TextDescription>
             </s.Container>
           </s.Container>
-          <s.SpacerLarge />
         </ResponsiveWrapper>
-
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.SpacerLarge />
@@ -702,7 +712,7 @@ function App() {
             </s.Container>
 
 
-            <s.SpacerLarge/>
+            <s.SpacerLarge />
             <s.Container
               flex={1}
               jc={"center"}
@@ -724,7 +734,7 @@ function App() {
             </s.Container>
 
 
-            <s.SpacerLarge/>
+            <s.SpacerLarge />
             <s.Container
               flex={1}
               jc={"center"}
@@ -746,7 +756,7 @@ function App() {
             </s.Container>
 
 
-            <s.SpacerLarge/>
+            <s.SpacerLarge />
             <s.Container
               flex={1}
               jc={"center"}
@@ -768,7 +778,7 @@ function App() {
             </s.Container>
 
 
-            <s.SpacerLarge/>
+            <s.SpacerLarge />
             <s.Container
               flex={1}
               jc={"center"}
@@ -790,102 +800,6 @@ function App() {
             </s.Container>
           </s.Container>
         </ResponsiveWrapper>
-
-
-
-
-        <s.SpacerLarge /><s.SpacerXSmall />
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.SpacerLarge />
-          <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
-            <s.TextDescription style={{
-              textAlign: "center",
-              color: "var(--secondary-text)",
-              fontSize: 100
-            }}>
-              Roadmap
-            </s.TextDescription>
-            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
-          </s.Container>
-          <s.SpacerMedium />
-        </ResponsiveWrapper>
-
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={1} jc={"center"} ai={"center"}>
-            <RMStyledImg alt={"Example"} src={"/config/images/Rat.png"} />
-          </s.Container>
-          <s.Container
-            flex={2}
-            jc={"center"}
-            ai={"center"}
-            style={{
-              padding: 24,
-              borderRadius: 24,
-              border: "2px solid var(--border)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
-            }}>
-            <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
-              Phase 1
-            </s.TextTitle>
-            <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
-              Coming soon.
-            </s.TextDescription>
-          </s.Container>
-          <s.SpacerLarge /><s.SpacerXSmall />
-        </ResponsiveWrapper>
-
-
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={1} jc={"center"} ai={"center"}>
-            <RMStyledImg alt={"Example"} src={"/config/images/Rat.png"} />
-          </s.Container>
-          <s.Container
-            flex={2}
-            jc={"center"}
-            ai={"center"}
-            style={{
-              padding: 24,
-              borderRadius: 24,
-              border: "2px solid var(--border)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
-            }}>
-            <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
-              Phase 2
-            </s.TextTitle>
-            <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
-              Coming Soon
-            </s.TextDescription>
-          </s.Container>
-          <s.SpacerLarge /><s.SpacerXSmall />
-        </ResponsiveWrapper>
-
-
-
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={1} jc={"center"} ai={"center"}>
-            <RMStyledImg flex={2} alt={"Example"} src={"/config/images/Rat.png"} />
-          </s.Container>
-          <s.Container
-            flex={2}
-            jc={"center"}
-            ai={"center"}
-            style={{
-              padding: 24,
-              borderRadius: 24,
-              border: "2px solid var(--border)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
-            }}>
-            <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
-              Phase 3
-            </s.TextTitle>
-            <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
-              Coming Soon
-            </s.TextDescription>
-          </s.Container>
-          <s.SpacerLarge /><s.SpacerXSmall />
-        </ResponsiveWrapper>
-
       </s.Container>
     </s.Screen >
   );
