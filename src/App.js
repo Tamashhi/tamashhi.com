@@ -514,7 +514,7 @@ function App() {
         <s.SpacerMedium />
         <s.SpacerLarge />
         <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-          <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
+          <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" style={{ transform: "scaleX(-1)" }} />
           <s.TextDescription style={{
             textAlign: "center",
             color: "var(--secondary-text)",
@@ -522,7 +522,7 @@ function App() {
           }}>
             The Tale of Tamashhi
           </s.TextDescription>
-          <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
+          <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png"/>
         </s.Container>
         <s.SpacerMedium />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
@@ -543,18 +543,18 @@ function App() {
                 manipulation. With Tamashhi gaining the upper hand in the confilct, the leaders of each village sit down with each other
                 in order to establish peace between the villages.
               </s.TextDescription>
-              
+
             </s.Container>
-            <s.SpacerMedium/>
+            <s.SpacerMedium />
             <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-              <s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
-            <s.TextDescription
+              <s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge />
+              <s.TextDescription
                 style={{
                   fontSize: 20,
                   textAlign: "center",
                   color: "var(--secondary-text)"
                 }}>
-              This begins the era of Peace.
+                This begins the era of Peace.
               </s.TextDescription>
             </s.Container>
             <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
@@ -570,9 +570,26 @@ function App() {
                 a dark past. This faction sends out a small group on a journey to discover the truth, sending
                 encrypted messages back to the rest of the faction with information they've learnt. As a Tamashhi
                 it is your job to intercept these messages to figure out what Lord Tamashhi is hiding from you.
+                Work together to crack these encrypted messages 
               </s.TextDescription>
             </s.Container>
           </s.Container>
+        </ResponsiveWrapper>
+
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+          <s.SpacerLarge />
+          <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" style={{ transform: "scaleX(-1)" }}/>
+            <s.TextDescription style={{
+              textAlign: "center",
+              color: "var(--secondary-text)",
+              fontSize: 100
+            }}>
+              About Us
+            </s.TextDescription>
+            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
+          </s.Container>
+          <s.SpacerMedium />
         </ResponsiveWrapper>
 
 
@@ -705,23 +722,7 @@ function App() {
             </s.Container>
           </s.Container>
         </ResponsiveWrapper>
-
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.SpacerLarge />
-          <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
-            <s.TextDescription style={{
-              textAlign: "center",
-              color: "var(--secondary-text)",
-              fontSize: 100
-            }}>
-              Roadmap
-            </s.TextDescription>
-            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
-          </s.Container>
-          <s.SpacerMedium />
-        </ResponsiveWrapper>
-
+<s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <TallRMStyledImg alt={"Example"} src={"/config/images/Roadmap.png"} />
