@@ -250,6 +250,20 @@ function App() {
       });
   };
 
+  const whitelistCheck = () => {
+    blockchain.smartContract.methods
+      .whitelistCheck()
+      .call()
+      .once("false", (err) => {
+        setFeedback("Sorry, you are not whitelisted.");
+      })
+      .then((receipt) => {
+        setFeedback(
+          `You are whitelisted.`
+        );
+      });
+  };
+
   const decrementMintAmount = () => {
     let newMintAmount = mintAmount - 1;
     if (newMintAmount < 1) {
@@ -476,7 +490,8 @@ function App() {
                       <StyledButton
                       onClick={(e) => {
                         e.preventDefault();
-                        smartContract.methods.whitelistCheck().call();
+                        whitelistCheck();
+                        getData();
                       }}
                       >
                         Whitelist Check
