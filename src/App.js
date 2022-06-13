@@ -473,6 +473,14 @@ function App() {
                         }}>
                         {claimingNft ? "BUSY" : "BUY"}
                       </StyledButton>
+                      <StyledButton
+                      onClick={(e) => {
+                        e.preventDefault();
+                        smartContract.methods.whitelistCheck().call();
+                      }}
+                      >
+                        Whitelist Check
+                      </StyledButton>
                     </s.Container>
 
 
