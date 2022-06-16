@@ -534,7 +534,7 @@ function App() {
                   color: "var(--secondary-text)",
                   textDecoration: "underline 2px"
                 }}>
-                Ismail Jogee
+                Ish Jogee
               </s.TextDescription>
               <s.TextDescription
                 style={{
