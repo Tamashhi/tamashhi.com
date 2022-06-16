@@ -525,7 +525,7 @@ function App() {
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-            <MedStyledImg alt="Twitter" src="/config/images/example.png" />
+            <MedStyledImg alt="Ish" src="/config/images/Ish.jpg" />
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
               <s.TextDescription
@@ -565,7 +565,7 @@ function App() {
 
 
           <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-            <MedStyledImg alt="Twitter" src="/config/images/example.png" />
+            <MedStyledImg alt="Callum" src="/config/images/Callum.jpg" />
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
               <s.TextDescription
@@ -604,7 +604,7 @@ function App() {
 
 
           <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-            <MedStyledImg alt="Twitter" src="/config/images/example.png" />
+            <MedStyledImg alt="Naomi" src="/config/images/Naomi.jpg" />
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
               <s.TextDescription
@@ -643,7 +643,7 @@ function App() {
 
 
           <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-            <MedStyledImg alt="Twitter" src="/config/images/example.png" />
+            <MedStyledImg alt="Luke" src="/config/images/Luke.jpg" />
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
               <s.TextDescription
