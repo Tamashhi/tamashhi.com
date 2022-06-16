@@ -1,6 +1,6 @@
 {
-  "CONTRACT_ADDRESS": "0xff5D446152dF67B9A71E9D83B771bD001A54077B",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xff5D446152dF67B9A71E9D83B771bD001A54077B",
+  "CONTRACT_ADDRESS": "0xb0f0449341380234E9dc20157D2FE900d713C59f",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xb0f0449341380234E9dc20157D2FE900d713C59f",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
@@ -8,10 +8,10 @@
   },
   "NFT_NAME": "Tamashhi",
   "SYMBOL": "TAMA",
-  "MAX_SUPPLY": 10000,
+  "MAX_SUPPLY": 7777,
   "maxMintPerTx": 1000,
-  "WEI_COST": 10000000000000000,
-  "DISPLAY_COST": 0.01,
+  "WEI_COST": 1000000000000000,
+  "DISPLAY_COST": 0.001,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
   "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/tamashhi-fzgddcfulf",

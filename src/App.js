@@ -237,7 +237,7 @@ function App() {
       })
       .once("error", (err) => {
         console.log(err);
-        setFeedback("Sorry, something went wrong please try again later.");
+        setFeedback("Sorry, you are not whitelisted.");
         setClaimingNft(false);
       })
       .then((receipt) => {
@@ -247,20 +247,6 @@ function App() {
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
-      });
-  };
-
-  const whitelistCheck = () => {
-    blockchain.smartContract.methods
-      .whitelistCheck()
-      .call()
-      .once("false", (err) => {
-        setFeedback("Sorry, you are not whitelisted.");
-      })
-      .then((receipt) => {
-        setFeedback(
-          `You are whitelisted.`
-        );
       });
   };
 
@@ -274,8 +260,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 1000) {
-      newMintAmount = 1000;
+    if (newMintAmount > 10) {
+      newMintAmount = 10;
     }
     setMintAmount(newMintAmount);
   };
@@ -354,7 +340,7 @@ function App() {
                 color: "var(--primary-text)"
               }}>
               <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-                {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
+                {CONFIG.CONTRACT_ADDRESS}
               </StyledLink>
             </s.TextDescription>
             <s.SpacerSmall />
@@ -425,15 +411,11 @@ function App() {
                         <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href="https://www.instagram.com/tamashhiNFT/" target="_blank">
-                        <SmallStyledImg alt="Instagram" src="/config/images/instagram.png" />
-                      </MediaStyledLink>
-                      <s.SpacerSmall />
                       <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
                         <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href="https://opensea.io" target="_blank">
+                      <MediaStyledLink href="https://opensea.io/tamashhi" target="_blank">
                         <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
                       </MediaStyledLink>
                     </s.Container>
@@ -487,15 +469,6 @@ function App() {
                         }}>
                         {claimingNft ? "BUSY" : "BUY"}
                       </StyledButton>
-                      <StyledButton
-                      onClick={(e) => {
-                        e.preventDefault();
-                        whitelistCheck();
-                        getData();
-                      }}
-                      >
-                        Whitelist Check
-                      </StyledButton>
                     </s.Container>
 
 
@@ -503,10 +476,6 @@ function App() {
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <MediaStyledLink href="https://twitter.com/Tamashhi" target="_blank" >
                         <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
-                      </MediaStyledLink>
-                      <s.SpacerSmall />
-                      <MediaStyledLink href="https://www.instagram.com/tamashhiNFT/" target="_blank">
-                        <SmallStyledImg alt="Instagram" src="/config/images/instagram.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
                       <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
@@ -536,73 +505,12 @@ function App() {
 
         <s.SpacerMedium />
         <s.SpacerLarge />
-        <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-          <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" style={{ transform: "scaleX(-1)" }} />
-          <s.TextDescription style={{
-            textAlign: "center",
-            color: "var(--secondary-text)",
-            fontSize: 100
-          }}>
-            The Tale of Tamashhi
-          </s.TextDescription>
-          <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png"/>
-        </s.Container>
-        <s.SpacerMedium />
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={1} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-            <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-              <TransparentStyledLogo alt={"Example"} src={"/config/images/logoShiny.png"} />
-              <s.TextDescription
-                style={{
-                  fontSize: 20,
-                  textAlign: "center",
-                  color: "var(--secondary-text)"
-                }}>
-                Our tale starts in the distant past in the land known as [name], a being known as Lord Tamashhi
-                has just split his own soul into 10,000 pieces, spreading them throughout the population creating
-                a new race of people that would be known as Tamashhi while Lord Tamashhi enters into a slumber.
-                Shunned by society, Tamashhi establish their own village away from the humans. After ??? years of conflict, Lord
-                Tamashhi awakens from his slumber and begins to teach Tamashhi how to harness the Lord's power of soul
-                manipulation. With Tamashhi gaining the upper hand in the confilct, the leaders of each village sit down with each other
-                in order to establish peace between the villages.
-              </s.TextDescription>
 
-            </s.Container>
-            <s.SpacerMedium />
-            <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-              <s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge />
-              <s.TextDescription
-                style={{
-                  fontSize: 20,
-                  textAlign: "center",
-                  color: "var(--secondary-text)"
-                }}>
-                This begins the era of Peace.
-              </s.TextDescription>
-            </s.Container>
-            <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-              <TransparentStyledLogo alt={"Example"} src={"/config/images/unknown.png"} />
-
-              <s.TextDescription
-                style={{
-                  fontSize: 20,
-                  textAlign: "center",
-                  color: "var(--secondary-text)"
-                }}>
-                However, a small faction of people don't trust Tamashhi and believe that Lord Tamashhi is hiding
-                a dark past. This faction sends out a small group on a journey to discover the truth, sending
-                encrypted messages back to the rest of the faction with information they've learnt. As a Tamashhi
-                it is your job to intercept these messages to figure out what Lord Tamashhi is hiding from you.
-                Work together to crack these encrypted messages 
-              </s.TextDescription>
-            </s.Container>
-          </s.Container>
-        </ResponsiveWrapper>
 
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.SpacerLarge />
           <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" style={{ transform: "scaleX(-1)" }}/>
+            <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" style={{ transform: "scaleX(-1)" }} />
             <s.TextDescription style={{
               textAlign: "center",
               color: "var(--secondary-text)",
@@ -615,25 +523,33 @@ function App() {
           <s.SpacerMedium />
         </ResponsiveWrapper>
 
-
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-            <MediaStyledLink href="https://twitter.com" target="_blank">
-              <MedStyledImg alt="Twitter" src="/config/images/example.png" />
-            </MediaStyledLink>
+            <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)"
+                  color: "var(--secondary-text)",
+                  textDecoration: "underline 2px"
                 }}>
                 Ismail Jogee
               </s.TextDescription>
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)"
+                  color: "var(--secondary-text)",
+                  fontSize: 20,
+                  fontWeight: "bold"
+                }}>
+                イスメール ジョジー
+              </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                  fontSize: 25
                 }}>
                 Owner
               </s.TextDescription>
@@ -641,7 +557,7 @@ function App() {
                 textAlign: "center",
                 color: "var(--secondary-text)"
               }}>
-                A couple sentences about yourself
+                Japanese wagyu seller and property entrepreneur.
               </s.TextDescription>
             </s.Container>
           </s.Container>
@@ -649,22 +565,30 @@ function App() {
 
 
           <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-            <MediaStyledLink href="https://twitter.com" target="_blank">
-              <MedStyledImg alt="Twitter" src="/config/images/example.png" />
-            </MediaStyledLink>
+            <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)"
+                  color: "var(--secondary-text)",
+                  textDecoration: "underline 2px"
                 }}>
                 Callum Sidebottom
               </s.TextDescription>
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)"
+                  color: "var(--secondary-text)",
+                  fontSize: 20,
+                  fontWeight: "bold"
+                }}>
+                カラム シデボットム
+              </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
                 }}>
                 Developer
               </s.TextDescription>
@@ -672,32 +596,37 @@ function App() {
                 textAlign: "center",
                 color: "var(--secondary-text)"
               }}>
-                A couple sentences about yourself
+                Obsessed with programming and manga!
               </s.TextDescription>
             </s.Container>
           </s.Container>
           <s.SpacerLarge />
 
 
-
-
-
           <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-            <MediaStyledLink href="https://twitter.com" target="_blank">
-              <MedStyledImg alt="Twitter" src="/config/images/example.png" />
-            </MediaStyledLink>
+            <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)"
+                  color: "var(--secondary-text)",
+                  textDecoration: "underline 2px"
                 }}>
                 Naomi Pitt
               </s.TextDescription>
               <s.TextDescription
                 style={{
                   textAlign: "center",
+                  color: "var(--secondary-text)",
+                  fontSize: 20,
+                  fontWeight: "bold"
+                }}>
+                ナオミ ピト
+              </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
                   color: "var(--secondary-text)"
                 }}>
                 Artist
@@ -713,28 +642,33 @@ function App() {
           <s.SpacerLarge />
 
 
-
-
-
           <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-            <MediaStyledLink href="https://twitter.com" target="_blank">
-              <MedStyledImg alt="Twitter" src="/config/images/example.png" />
-            </MediaStyledLink>
+            <MedStyledImg alt="Twitter" src="/config/images/example.png" />
             <s.SpacerLarge />
             <s.Container flex={2} jc={"center"} ai={"center"}>
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)"
+                  color: "var(--secondary-text)",
+                  textDecoration: "underline 2px"
                 }}>
                 Luke Smith
               </s.TextDescription>
               <s.TextDescription
                 style={{
                   textAlign: "center",
+                  color: "var(--secondary-text)",
+                  fontSize: 20,
+                  fontWeight: "bold"
+                }}>
+                ルーク スミス
+              </s.TextDescription>
+              <s.TextDescription
+                style={{
+                  textAlign: "center",
                   color: "var(--secondary-text)"
                 }}>
-                Artist
+                Social Media/Artist
               </s.TextDescription>
               <s.TextDescription style={{
                 textAlign: "center",
@@ -745,121 +679,29 @@ function App() {
             </s.Container>
           </s.Container>
         </ResponsiveWrapper>
-<s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={1} jc={"center"} ai={"center"}>
-            <TallRMStyledImg alt={"Example"} src={"/config/images/Roadmap.png"} />
+        <s.SpacerLarge />
+        <ResponsiveWrapper flex={1} style={{ padding: 1 }} test>
+          <s.SpacerLarge />
+          <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+            <s.TextDescription style={{
+              textAlign: "center",
+              color: "var(--secondary-text)",
+              fontSize: 25
+            }}>
+              Chat with us over on discord!
+            </s.TextDescription>
+            <s.SpacerXSmall />
           </s.Container>
-          <s.Container flex={3} jc={"center"} ai={"center"}>
-            <s.Container
-              flex={1}
-              jc={"center"}
-              ai={"center"}
-              image={"/config/images/background.png"}
-              style={{
-                backgroundColor: "var(--primary)",
-                padding: 24,
-                borderRadius: 24,
-                border: "2px solid var(--border)",
-                boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
-              }}>
-              <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
-                Phase 1
-              </s.TextTitle>
-              <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
-                Coming soon.
-              </s.TextDescription>
-            </s.Container>
-
-
-            <s.SpacerLarge />
-            <s.Container
-              flex={1}
-              jc={"center"}
-              ai={"center"}
-              image={"/config/images/background.png"}
-              style={{
-                backgroundColor: "var(--primary)",
-                padding: 24,
-                borderRadius: 24,
-                border: "2px solid var(--border)",
-                boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
-              }}>
-              <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
-                Phase 2
-              </s.TextTitle>
-              <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
-                Coming soon.
-              </s.TextDescription>
-            </s.Container>
-
-
-            <s.SpacerLarge />
-            <s.Container
-              flex={1}
-              jc={"center"}
-              ai={"center"}
-              image={"/config/images/background.png"}
-              style={{
-                backgroundColor: "var(--primary)",
-                padding: 24,
-                borderRadius: 24,
-                border: "2px solid var(--border)",
-                boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
-              }}>
-              <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
-                Phase 3
-              </s.TextTitle>
-              <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
-                Coming soon.
-              </s.TextDescription>
-            </s.Container>
-
-
-            <s.SpacerLarge />
-            <s.Container
-              flex={1}
-              jc={"center"}
-              ai={"center"}
-              image={"/config/images/background.png"}
-              style={{
-                backgroundColor: "var(--primary)",
-                padding: 24,
-                borderRadius: 24,
-                border: "2px solid var(--border)",
-                boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
-              }}>
-              <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
-                Phase 4
-              </s.TextTitle>
-              <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
-                Coming soon.
-              </s.TextDescription>
-            </s.Container>
-
-
-            <s.SpacerLarge />
-            <s.Container
-              flex={1}
-              jc={"center"}
-              ai={"center"}
-              image={"/config/images/background.png"}
-              style={{
-                backgroundColor: "var(--primary)",
-                padding: 24,
-                borderRadius: 24,
-                border: "2px solid var(--border)",
-                boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
-              }}>
-              <s.TextTitle style={{ fontSize: 40, color: "var(--accent-text)" }}>
-                Phase 5
-              </s.TextTitle>
-              <s.TextDescription style={{ fontSize: 20, color: "var(--accent-text)" }}>
-                Coming soon.
-              </s.TextDescription>
-            </s.Container>
+          <s.SpacerMedium />
+        </ResponsiveWrapper>
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+          <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+            <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
+              <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
+            </MediaStyledLink>
           </s.Container>
         </ResponsiveWrapper>
+        <s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge />
       </s.Container>
     </s.Screen >
   );
