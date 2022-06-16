@@ -543,7 +543,7 @@ function App() {
                   fontSize: 20,
                   fontWeight: "bold"
                 }}>
-                イスメール ジョジー
+                イシュ ジョジ
               </s.TextDescription>
               <s.TextDescription
                 style={{
