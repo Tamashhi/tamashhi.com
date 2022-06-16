@@ -501,7 +501,20 @@ function App() {
             />
           </s.Container>
         </ResponsiveWrapper>
+        <s.SpacerMedium />
+        <s.SpacerLarge />
 
+        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+          <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+            <s.TextDescription
+                style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                }}>
+                  Get ready to embrace the beautiful souls coming too the metaverse soon!
+            </s.TextDescription>
+          </s.Container>
+        </ResponsiveWrapper>
 
         <s.SpacerMedium />
         <s.SpacerLarge />
