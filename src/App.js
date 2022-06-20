@@ -310,9 +310,9 @@ function App() {
             <s.TextDescription style={{
               textAlign: "center",
               color: "var(--secondary-text)",
-              fontSize: 100,
+              fontSize: 90,
             }}>
-              About Us
+              Tamashhi
             </s.TextDescription>
           </s.Container>
           <s.SpacerMedium />
@@ -483,7 +483,7 @@ function App() {
             <s.TextDescription style={{
               textAlign: "center",
               color: "var(--secondary-text)",
-              fontSize: 100,
+              fontSize: 90,
             }}>
               About Us
             </s.TextDescription>
