@@ -548,6 +548,7 @@ function App() {
                 style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
+                  fontSize: 25
                 }}>
                 Developer
               </s.TextDescription>
@@ -587,7 +588,8 @@ function App() {
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)"
+                  color: "var(--secondary-text)",
+                  fontSize: 25
                 }}>
                 Artist
               </s.TextDescription>
@@ -627,7 +629,8 @@ function App() {
               <s.TextDescription
                 style={{
                   textAlign: "center",
-                  color: "var(--secondary-text)"
+                  color: "var(--secondary-text)",
+                  fontSize: 25
                 }}>
                 Social Media/Artist
               </s.TextDescription>
