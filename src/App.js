@@ -196,7 +196,7 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`Mint up to 1000`);
+  const [feedback, setFeedback] = useState(`Mint up to 10`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
@@ -325,23 +325,13 @@ function App() {
               border: "2px solid var(--border)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
             }}>
-            <s.TextTitle
-              style={{
-                textAlign: "center",
-                fontSize: 50,
-                fontWeight: "bold",
-                color: "var(--accent-text)"
-              }}>
-              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
-            </s.TextTitle>
+            
             <s.TextDescription
               style={{
                 textAlign: "center",
                 color: "var(--primary-text)"
               }}>
-              <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-                {CONFIG.CONTRACT_ADDRESS}
-              </StyledLink>
+              
             </s.TextDescription>
             <s.SpacerSmall />
             {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
@@ -362,13 +352,13 @@ function App() {
             ) : (
               <>
                 <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
+                  style={{ textAlign: "center", color: "var(--accent-text)"}}
                 >
                   Mint for {CONFIG.DISPLAY_COST}{CONFIG.NETWORK.SYMBOL} each.
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}>
+                  style={{ textAlign: "center", color: "var(--accent-text)"}}>
                   Plus reduced gas fees for multiple mints!
                 </s.TextDescription>
                 <s.SpacerSmall />
@@ -378,7 +368,7 @@ function App() {
                     <s.TextDescription
                       style={{
                         textAlign: "center",
-                        color: "var(--accent-text)"
+                        color: "var(--accent-text)", 
                       }}>
                       Connect your MetaMask wallet
                     </s.TextDescription>
@@ -431,44 +421,14 @@ function App() {
                     </s.TextDescription>
                     <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <StyledRoundButton
-                        style={{ lineHeight: 0.4 }}
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          decrementMintAmount();
-                        }}>
-                        -
-                      </StyledRoundButton>
-                      <s.SpacerMedium />
-                      <s.TextDescription
-                        style={{
-                          textAlign: "center",
-                          color: "var(--accent-text)"
-                        }}>
-                        {mintAmount}
-                      </s.TextDescription>
-                      <s.SpacerMedium />
-                      <StyledRoundButton
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          incrementMintAmount();
-                        }}>
-                        +
-                      </StyledRoundButton>
-                    </s.Container>
-                    <s.SpacerSmall />
-                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <StyledButton
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          claimNFTs();
-                          getData();
-                        }}>
-                        {claimingNft ? "BUSY" : "BUY"}
-                      </StyledButton>
+                    <s.TextDescription
+                      style={{
+                        textAlign: "center",
+                        color: "var(--accent-text)",
+                        fontSize: 35
+                      }}>
+                      COMING SOON
+                    </s.TextDescription>
                     </s.Container>
 
 
@@ -511,7 +471,7 @@ function App() {
             <s.TextDescription style={{
               textAlign: "center",
               color: "var(--secondary-text)",
-              fontSize: 100
+              fontSize: 100,
             }}>
               About Us
             </s.TextDescription>
@@ -529,7 +489,8 @@ function App() {
                 style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
-                  textDecoration: "underline 2px"
+                  textDecoration: "underline 2px",
+                  fontSize: 20
                 }}>
                 Ish Jogee
               </s.TextDescription>
@@ -569,7 +530,8 @@ function App() {
                 style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
-                  textDecoration: "underline 2px"
+                  textDecoration: "underline 2px",
+                  fontSize: 20
                 }}>
                 Callum Sidebottom
               </s.TextDescription>
@@ -608,7 +570,8 @@ function App() {
                 style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
-                  textDecoration: "underline 2px"
+                  textDecoration: "underline 2px",
+                  fontSize: 20
                 }}>
                 Naomi Pitt
               </s.TextDescription>
@@ -647,7 +610,8 @@ function App() {
                 style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
-                  textDecoration: "underline 2px"
+                  textDecoration: "underline 2px",
+                  fontSize: 20
                 }}>
                 Luke Smith
               </s.TextDescription>
