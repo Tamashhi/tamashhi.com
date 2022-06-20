@@ -305,7 +305,6 @@ function App() {
           <TransparentStyledLogo alt={"logo"} src={"/config/images/logoShiny.png"} />
         </s.Container>
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.SpacerLarge />
           <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
             <s.TextDescription style={{
               textAlign: "center",
@@ -315,7 +314,6 @@ function App() {
               Tamashhi
             </s.TextDescription>
           </s.Container>
-          <s.SpacerMedium />
         </ResponsiveWrapper>
 
         <s.SpacerXSmall />
