@@ -304,18 +304,7 @@ function App() {
           <s.SpacerLarge />
           <TransparentStyledLogo alt={"logo"} src={"/config/images/logoShiny.png"} />
         </s.Container>
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-          <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-            <s.TextDescription style={{
-              textAlign: "center",
-              color: "var(--secondary-text)",
-              fontSize: 90,
-            }}>
-              Tamashhi
-            </s.TextDescription>
-          </s.Container>
-        </ResponsiveWrapper>
-
+        
         <s.SpacerXSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
