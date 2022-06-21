@@ -652,7 +652,7 @@ function App() {
               color: "var(--secondary-text)",
               fontSize: 25
             }}>
-              Chat with us over on discord!
+              More info over on discord!
             </s.TextDescription>
             <s.SpacerXSmall />
           </s.Container>
