@@ -597,7 +597,7 @@ function App() {
                 textAlign: "center",
                 color: "var(--secondary-text)"
               }}>
-                A couple sentences about yourself
+                Doodler, 80s is the best era!
               </s.TextDescription>
             </s.Container>
           </s.Container>
