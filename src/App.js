@@ -302,6 +302,7 @@ function App() {
 
         <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
           <s.SpacerLarge />
+          <s.SpacerLarge/>
           <TransparentStyledLogo alt={"logo"} src={"/config/images/logoShiny.png"} />
         </s.Container>
         
