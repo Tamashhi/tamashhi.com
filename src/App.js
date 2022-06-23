@@ -556,7 +556,7 @@ function App() {
                 textAlign: "center",
                 color: "var(--secondary-text)"
               }}>
-                Always been obsessed with programming and recently been getting into crypto, wish i had joined sooner! Active most on discord if you want to hit me up!
+                Always been obsessed with programming and recently been getting into crypto, wish i had joined sooner! Active most on discord if you have any questions!
               </s.TextDescription>
             </s.Container>
           </s.Container>
