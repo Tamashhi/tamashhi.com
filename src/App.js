@@ -515,7 +515,7 @@ function App() {
                 textAlign: "center",
                 color: "var(--secondary-text)"
               }}>
-                Japanese wagyu seller and property entrepreneur.
+                Japanese wagyu seller and property entrepreneur. Been in crypto since 2017.
               </s.TextDescription>
             </s.Container>
           </s.Container>
