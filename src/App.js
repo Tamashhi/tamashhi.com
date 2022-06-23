@@ -638,7 +638,9 @@ function App() {
                 textAlign: "center",
                 color: "var(--secondary-text)"
               }}>
-                A couple sentences about yourself
+                A graphic designer who visualizes the world you live in with a different perspective in every project .
+
+Currently exploring the world of NFT's
               </s.TextDescription>
             </s.Container>
           </s.Container>
