@@ -325,13 +325,23 @@ function App() {
               border: "2px solid var(--border)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
             }}>
-            
+            <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize: 50,
+                fontWeight: "bold",
+                color: "var(--accent-text)"
+              }}>
+              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+            </s.TextTitle>
             <s.TextDescription
               style={{
                 textAlign: "center",
                 color: "var(--primary-text)"
               }}>
-              
+              <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
+                {CONFIG.CONTRACT_ADDRESS}
+              </StyledLink>
             </s.TextDescription>
             <s.SpacerSmall />
             {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
@@ -421,14 +431,44 @@ function App() {
                     </s.TextDescription>
                     <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                    <s.TextDescription
-                      style={{
-                        textAlign: "center",
-                        color: "var(--accent-text)",
-                        fontSize: 35
-                      }}>
-                      COMING SOON
-                    </s.TextDescription>
+                    <StyledRoundButton
+                        style={{ lineHeight: 0.4 }}
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          decrementMintAmount();
+                        }}>
+                        -
+                      </StyledRoundButton>
+                      <s.SpacerMedium />
+                      <s.TextDescription
+                        style={{
+                          textAlign: "center",
+                          color: "var(--accent-text)"
+                        }}>
+                        {mintAmount}
+                      </s.TextDescription>
+                      <s.SpacerMedium />
+                      <StyledRoundButton
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          incrementMintAmount();
+                        }}>
+                        +
+                      </StyledRoundButton>
+                    </s.Container>
+                    <s.SpacerSmall />
+                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                      <StyledButton
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          claimNFTs();
+                          getData();
+                        }}>
+                        {claimingNft ? "BUSY" : "BUY"}
+                      </StyledButton>
                     </s.Container>
 
 
