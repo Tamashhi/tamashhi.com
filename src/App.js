@@ -556,7 +556,7 @@ function App() {
                 textAlign: "center",
                 color: "var(--secondary-text)"
               }}>
-                Obsessed with programming and manga!
+                Always been obsessed with programming and recently been getting into crypto, wish i had joined sooner!
               </s.TextDescription>
             </s.Container>
           </s.Container>
