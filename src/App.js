@@ -351,7 +351,7 @@ function App() {
                         <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
-                      <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
+                      <MediaStyledLink href="https://discord.gg/hbRhGS5Crk" target="_blank">
                         <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
                       </MediaStyledLink>
                       <s.SpacerSmall />
@@ -570,7 +570,7 @@ function App() {
         </ResponsiveWrapper>
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-            <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
+            <MediaStyledLink href="https://discord.gg/hbRhGS5Crk" target="_blank">
               <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
             </MediaStyledLink>
           </s.Container>
