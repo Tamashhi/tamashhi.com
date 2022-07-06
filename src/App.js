@@ -250,6 +250,18 @@ function App() {
       });
   };
 
+  const userTokens = () => {
+    blockchain.smartContract.methods
+    .ownedTokens()
+    .call(function (err, res) {
+      if (err) {
+        console.log("An error occured", err)
+        return
+      }
+      console.log(res)
+      });
+  };
+
   const decrementMintAmount = () => {
     let newMintAmount = mintAmount - 1;
     if (newMintAmount < 1) {
@@ -325,154 +337,15 @@ function App() {
               border: "2px solid var(--border)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
             }}>
-            <s.TextTitle
-              style={{
-                textAlign: "center",
-                fontSize: 50,
-                fontWeight: "bold",
-                color: "var(--accent-text)"
-              }}>
-              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
-            </s.TextTitle>
-            <s.TextDescription
-              style={{
-                textAlign: "center",
-                color: "var(--primary-text)"
-              }}>
-              <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-                {CONFIG.CONTRACT_ADDRESS}
-              </StyledLink>
+              <s.SpacerLarge/><s.SpacerLarge/>
+            <s.TextDescription style={{
+              textAlign: "center",
+              color: "var(--secondary-text)",
+              fontSize: 35,
+            }}>
+              Souls being dispersed soon...
             </s.TextDescription>
-            <s.SpacerSmall />
-            {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
-              <>
-                <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}>
-                  Sold out.
-                </s.TextTitle>
-                <s.TextDescription
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}>
-                  You can still find {CONFIG.NFT_NAME} on
-                </s.TextDescription>
-                <s.SpacerSmall />
-                <StyledLink target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
-                  {CONFIG.MARKETPLACE}
-                </StyledLink>
-              </>
-            ) : (
-              <>
-                <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)"}}
-                >
-                  Mint for {CONFIG.DISPLAY_COST}{CONFIG.NETWORK.SYMBOL} each.
-                </s.TextTitle>
-                <s.SpacerXSmall />
-                <s.TextDescription
-                  style={{ textAlign: "center", color: "var(--accent-text)"}}>
-                  Plus reduced gas fees for multiple mints!
-                </s.TextDescription>
-                <s.SpacerSmall />
-                {blockchain.account === "" ||
-                  blockchain.smartContract === null ? (
-                  <s.Container ai={"center"} jc={"center"}>
-                    <s.TextDescription
-                      style={{
-                        textAlign: "center",
-                        color: "var(--accent-text)", 
-                      }}>
-                      Connect your MetaMask wallet
-                    </s.TextDescription>
-                    <s.SpacerSmall />
-                    <StyledButton
-                      onClick={(e) => {
-                        e.preventDefault();
-                        dispatch(connect());
-                        getData();
-                      }}>
-                      CONNECT
-                    </StyledButton>
-                    {blockchain.errorMsg !== "" ? (
-                      <>
-                        <s.SpacerSmall />
-                        <s.TextDescription
-                          style={{
-                            textAlign: "center",
-                            color: "var(--accent-text)"
-                          }}>
-                          {blockchain.errorMsg}
-                        </s.TextDescription>
-                      </>
-                    ) : null}
-
-
-                    <s.SpacerMedium />
-                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
-                        <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
-                      </MediaStyledLink>
-                      <s.SpacerSmall />
-                      <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
-                        <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
-                      </MediaStyledLink>
-                      <s.SpacerSmall />
-                      <MediaStyledLink href="https://opensea.io/tamashhi" target="_blank">
-                        <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
-                      </MediaStyledLink>
-                    </s.Container>
-                  </s.Container>
-                ) : (
-                  <>
-                    <s.TextDescription
-                      style={{
-                        textAlign: "center",
-                        color: "var(--accent-text)"
-                      }}>
-                      {feedback}
-                    </s.TextDescription>
-                    <s.SpacerMedium />
-                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                    <StyledRoundButton
-                        style={{ lineHeight: 0.4 }}
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          decrementMintAmount();
-                        }}>
-                        -
-                      </StyledRoundButton>
-                      <s.SpacerMedium />
-                      <s.TextDescription
-                        style={{
-                          textAlign: "center",
-                          color: "var(--accent-text)"
-                        }}>
-                        {mintAmount}
-                      </s.TextDescription>
-                      <s.SpacerMedium />
-                      <StyledRoundButton
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          incrementMintAmount();
-                        }}>
-                        +
-                      </StyledRoundButton>
-                    </s.Container>
-                    <s.SpacerSmall />
-                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <StyledButton
-                        disabled={claimingNft ? 1 : 0}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          claimNFTs();
-                          getData();
-                        }}>
-                        {claimingNft ? "BUSY" : "BUY"}
-                      </StyledButton>
-                    </s.Container>
-
-
-                    <s.SpacerMedium />
+            <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <MediaStyledLink href="https://twitter.com/Tamashhi" target="_blank" >
                         <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
@@ -486,10 +359,6 @@ function App() {
                         <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
                       </MediaStyledLink>
                     </s.Container>
-                  </>
-                )}
-              </>
-            )}
             <s.SpacerMedium />
           </s.Container>
           <s.SpacerLarge />
@@ -596,7 +465,7 @@ function App() {
                 textAlign: "center",
                 color: "var(--secondary-text)"
               }}>
-                Always been obsessed with programming and recently been getting into crypto, wish i had joined sooner! Active most on discord if you have any questions!
+                Always been obsessed with programming and recently been getting into crypto, wish i had joined sooner!
               </s.TextDescription>
             </s.Container>
           </s.Container>
@@ -637,7 +506,7 @@ function App() {
                 textAlign: "center",
                 color: "var(--secondary-text)"
               }}>
-                A couple sentences about yourself
+                A simplistic doodler with a passion to create something beautiful
               </s.TextDescription>
             </s.Container>
           </s.Container>
@@ -680,7 +549,6 @@ function App() {
               }}>
                 A graphic designer who visualizes the world you live in with a different perspective in every project .
 
-Currently exploring the world of NFT's
               </s.TextDescription>
             </s.Container>
           </s.Container>
