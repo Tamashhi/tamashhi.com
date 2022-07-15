@@ -139,9 +139,9 @@ export const TransparentStyledLogo = styled.img`
   }
 `;
 export const TransparentStyledTitle = styled.img`
-  width: 400px;
+  width: 200px;
   @media (min-width: 900px) {
-    width: 400px;
+    width: 300px;
   }
   @media (min-width: 1000px) {
     width: 800px;
