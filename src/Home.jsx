@@ -307,7 +307,8 @@ export default function Home() {
             borderRadius: 0,
             border: "2px solid var(--border)",
             boxShadow: "0px 5px 50px 2px rgba(0,0,0,0.7)"
-          }}>
+          }}
+          image={CONFIG.SHOW_BACKGROUND ? "/config/images/banner.png" : null}>
           <s.SpacerLarge />
           <TransparentStyledLogo src="./config/images/logoShiny.png"/>
           <s.TextDescription style={{

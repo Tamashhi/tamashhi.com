@@ -305,7 +305,7 @@ export default function About() {
                     border: "2px solid var(--border)",
                     boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
                   }}
-                image={CONFIG.SHOW_BACKGROUND ? "/config/images/back.png" : null}>
+                image={CONFIG.SHOW_BACKGROUND ? "/config/images/banner.png" : null}>
             <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
                 <s.SpacerLarge />
                 <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
@@ -323,7 +323,7 @@ export default function About() {
             </ResponsiveWrapper>
 
             <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-                <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+                <s.Container flex={2} jc={"center"} ai={"center"}  style={{ backgroundColor: "var(--primary)", borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
                     <MedStyledImg alt="Ish" src="/config/images/Ish.jpg" />
                     <s.SpacerLarge />
                     <s.Container flex={2} jc={"center"} ai={"center"}>
@@ -364,7 +364,7 @@ export default function About() {
                 <s.SpacerLarge />
 
 
-                <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+                <s.Container flex={2} jc={"center"} ai={"center"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
                     <MedStyledImg alt="Callum" src="/config/images/Callum.jpg" />
                     <s.SpacerLarge />
                     <s.Container flex={2} jc={"center"} ai={"center"}>
@@ -405,7 +405,7 @@ export default function About() {
                 <s.SpacerLarge />
 
 
-                <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+                <s.Container flex={2} jc={"center"} ai={"center"}  style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
                     <MedStyledImg alt="Naomi" src="/config/images/Naomi.jpg" />
                     <s.SpacerLarge />
                     <s.Container flex={2} jc={"center"} ai={"center"}>
@@ -446,7 +446,7 @@ export default function About() {
                 <s.SpacerLarge />
 
 
-                <s.Container flex={2} jc={"center"} ai={"center"} image={"/config/images/background.png"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
+                <s.Container flex={2} jc={"center"} ai={"center"}  style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
                     <MedStyledImg alt="Luke" src="/config/images/Luke.jpg" />
                     <s.SpacerLarge />
                     <s.Container flex={2} jc={"center"} ai={"center"}>

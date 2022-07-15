@@ -292,51 +292,49 @@ export default function Layout() {
     getData();
   }, [blockchain.account]);
   return (
-    <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
-      <s.Screen>
-        <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}
+    <ResponsiveWrapper>
+      <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
+        <s.Screen>
+          <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}
 
-          image={CONFIG.SHOW_BACKGROUND ? "/config/images/banner.png" : null}>
-            <s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <MediaStyledLink href="/" >
-            <s.TextDescription style={{
-              textAlign: "center",
-              color: "var(--secondary-text)",
-              fontSize: 35,
-            }}>
-              Home
-            </s.TextDescription>
-          </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <MediaStyledLink href="/About" >
-            <s.TextDescription style={{
-              textAlign: "center",
-              color: "var(--secondary-text)",
-              fontSize: 35,
-            }}>
-              About
-            </s.TextDescription>
-          </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <MediaStyledLink href="/Staking" >
-            <s.TextDescription style={{
-              textAlign: "center",
-              color: "var(--secondary-text)",
-              fontSize: 35,
-            }}>
-              Staking
-            </s.TextDescription>
-          </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <MediaStyledLink href="/Mint" >
-            <s.TextDescription style={{
-              textAlign: "center",
-              color: "var(--secondary-text)",
-              fontSize: 35,
-            }}>
-              Mint
-            </s.TextDescription>
-          </MediaStyledLink>
-          <s.Container ai={"center"} jc={"center"} fd={"row"}>
-          <s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
+            image={CONFIG.SHOW_BACKGROUND ? "/config/images/navbar.png" : null}>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <MediaStyledLink href="/" >
+              <s.TextDescription style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+                fontSize: 35,
+              }}>
+                Home
+              </s.TextDescription>
+            </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <MediaStyledLink href="/About" >
+              <s.TextDescription style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+                fontSize: 35,
+              }}>
+                About
+              </s.TextDescription>
+            </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <MediaStyledLink href="/Staking" >
+              <s.TextDescription style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+                fontSize: 35,
+              }}>
+                Staking
+              </s.TextDescription>
+            </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <MediaStyledLink href="/Mint" >
+              <s.TextDescription style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+                fontSize: 35,
+              }}>
+                Mint
+              </s.TextDescription>
+            </MediaStyledLink>
             <MediaStyledLink href="https://twitter.com/Tamashhi" target="_blank" >
               <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
             </MediaStyledLink>
@@ -349,10 +347,11 @@ export default function Layout() {
               <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
             </MediaStyledLink>
           </s.Container>
-        </s.Container>
-        <Outlet />
 
-      </s.Screen>
-    </s.Container>
+          <Outlet />
+
+        </s.Screen>
+      </s.Container>
+    </ResponsiveWrapper>
   )
 }
