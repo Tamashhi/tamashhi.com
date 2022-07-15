@@ -308,112 +308,126 @@ export default function Home() {
   return (
     <s.Screen>
       <ResponsiveWrapper flex={1}>
-      <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
-        <s.Container
-          flex={1}
-          ai={"center"}
-          style={{
-            backgroundColor: "var(--primary)",
-            padding: 24,
-            borderRadius: 0,
-            border: "2px solid var(--border)",
-          }}
-          image={CONFIG.SHOW_BACKGROUND ? "/config/images/banner.png" : null}>
-          <s.SpacerLarge />
-          <TransparentStyledLogo src="./config/images/logoShiny.png"/>
-          <TransparentStyledTitle src="./config/images/Title.png"/>
-        </s.Container>
-        <s.Container
-          flex={1}
-          ai={"center"}
-          style={{
-            backgroundColor: "var(--primary)",
-            padding: 24,
-            borderRadius: 0,
-            border: "2px solid var(--border)",
-            boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
-          }}
-          image={CONFIG.SHOW_BACKGROUND ? "/config/images/back.png" : null}>
-          <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-            <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
-              <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 50,
-              }}>
-                Tamashhi NFT
-              </s.TextDescription>
-              <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 35,
-              }}>
-                Supply
-              </s.TextDescription>
-              <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 20,
-              }}>
-                7,777
-              </s.TextDescription>
-              <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 35,
-              }}>
-                Utility
-              </s.TextDescription>
-              <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 20,
-              }}>
-                ???
-              </s.TextDescription>
-              <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 35,
-              }}>
-                Story
-              </s.TextDescription>
-              <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 20,
-              }}>
-                ???
-              </s.TextDescription>
-            </s.Container>
-
+        <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
+          <s.Container
+            flex={1}
+            ai={"center"}
+            style={{
+              backgroundColor: "var(--primary)",
+              padding: 24,
+              borderRadius: 0,
+              border: "2px solid var(--border)",
+              boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
+            }}
+            image={CONFIG.SHOW_BACKGROUND ? "/config/images/banner.png" : null}>
+            <s.SpacerLarge />
+            <TransparentStyledLogo src="./config/images/logoShiny.png" />
+            <TransparentStyledTitle src="./config/images/Title.png" />
+            <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                      <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
+                        <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
+                      </MediaStyledLink>
+                      <s.SpacerSmall />
+                      <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
+                        <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
+                      </MediaStyledLink>
+                      <s.SpacerSmall />
+                      <MediaStyledLink href="https://opensea.io/tamashhi" target="_blank">
+                        <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
+                      </MediaStyledLink>
+                    </s.Container>
+          </s.Container>
+          <s.Container
+            flex={1}
+            ai={"center"}
+            style={{
+              backgroundColor: "var(--primary)",
+              padding: 24,
+              borderRadius: 0,
+              border: "2px solid var(--border)",
+              boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
+            }}
+            image={CONFIG.SHOW_BACKGROUND ? "/config/images/back.png" : null}>
             <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-              <MediaStyledLink href="/Mint">
-              <StyledImg alt="example" src="/config/images/Callum.jpg" />
-              </MediaStyledLink>            
+              <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
+                <s.TextDescription style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                  fontSize: 50,
+                }}>
+                  Tamashhi NFT
+                </s.TextDescription>
+                <s.TextDescription style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                  fontSize: 35,
+                }}>
+                  Supply
+                </s.TextDescription>
+                <s.TextDescription style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                  fontSize: 20,
+                }}>
+                  7,777
+                </s.TextDescription>
+                <s.TextDescription style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                  fontSize: 35,
+                }}>
+                  Utility
+                </s.TextDescription>
+                <s.TextDescription style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                  fontSize: 20,
+                }}>
+                  ???
+                </s.TextDescription>
+                <s.TextDescription style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                  fontSize: 35,
+                }}>
+                  Story
+                </s.TextDescription>
+                <s.TextDescription style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                  fontSize: 20,
+                }}>
+                  ???
+                </s.TextDescription>
+              </s.Container>
+
+              <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+                <MediaStyledLink href="/Mint">
+                  <StyledImg alt="example" src="/config/images/Callum.jpg" />
+                </MediaStyledLink>
+              </s.Container>
             </s.Container>
           </s.Container>
-        </s.Container>
-        <s.Container
-          flex={1}
-          ai={"center"}
-          style={{
-            backgroundColor: "var(--primary)",
-            padding: 24,
-            borderRadius: 0,
-            border: "2px solid var(--border)",
-            boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
-          }}>
+          <s.Container
+            flex={1}
+            ai={"center"}
+            style={{
+              backgroundColor: "var(--primary)",
+              padding: 24,
+              borderRadius: 0,
+              border: "2px solid var(--border)",
+              boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
+            }}>
             <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 50,
-              }}>
-                More coming soon...
-              </s.TextDescription>
-          
+              textAlign: "center",
+              color: "var(--secondary-text)",
+              fontSize: 50,
+            }}>
+              More coming soon...
+            </s.TextDescription>
+
+          </s.Container>
         </s.Container>
-      </s.Container>
       </ResponsiveWrapper>
     </s.Screen >
   );

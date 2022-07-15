@@ -292,33 +292,33 @@ export default function Layout() {
     getData();
   }, [blockchain.account]);
   return (
-    <ResponsiveWrapper>
+    <ResponsiveWrapper flex={1}>
       <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
         <s.Screen>
           <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}
-
             image={CONFIG.SHOW_BACKGROUND ? "/config/images/navbar.png" : null}>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <ResponsiveWrapper>
-              <MediaStyledLink href="/" >
-                <TransparentStyledLogo src="./config/images/Home.png" />
-              </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <MediaStyledLink href="/About" >
-                <TransparentStyledLogo src="./config/images/About.png" />
-              </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <MediaStyledLink href="/Staking" >
-                <TransparentStyledLogo src="./config/images/Staking.png" />
-              </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <MediaStyledLink href="/Mint" >
-                <TransparentStyledLogo src="./config/images/Mint.png" />
-              </MediaStyledLink>
+              <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+                <MediaStyledLink href="/" >
+                  <TransparentStyledLogo src="./config/images/Home.png" />
+                </MediaStyledLink>
+                <MediaStyledLink href="/About" >
+                  <TransparentStyledLogo src="./config/images/About.png" />
+                </MediaStyledLink>
+                <MediaStyledLink href="/Staking" >
+                  <TransparentStyledLogo src="./config/images/Staking.png" />
+                </MediaStyledLink>
+                <MediaStyledLink href="/Mint" >
+                  <TransparentStyledLogo src="./config/images/Mint.png" />
+                </MediaStyledLink>
+              </s.Container>
             </ResponsiveWrapper>
           </s.Container>
 
           <Outlet />
 
         </s.Screen>
-      </s.Container>
-    </ResponsiveWrapper>
+      </s.Container >
+    </ResponsiveWrapper >
   )
 }
