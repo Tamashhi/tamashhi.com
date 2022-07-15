@@ -335,17 +335,6 @@ export default function Layout() {
                 Mint
               </s.TextDescription>
             </MediaStyledLink>
-            <MediaStyledLink href="https://twitter.com/Tamashhi" target="_blank" >
-              <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
-            </MediaStyledLink>
-            <s.SpacerSmall />
-            <MediaStyledLink href="https://discord.gg/hbRhGS5Crk" target="_blank">
-              <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
-            </MediaStyledLink>
-            <s.SpacerSmall />
-            <MediaStyledLink href="https://opensea.io" target="_blank">
-              <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
-            </MediaStyledLink>
           </s.Container>
 
           <Outlet />

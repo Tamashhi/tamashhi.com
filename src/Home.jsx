@@ -297,6 +297,7 @@ export default function Home() {
 
   return (
     <s.Screen>
+      <ResponsiveWrapper flex={1}>
       <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
         <s.Container
           flex={1}
@@ -420,6 +421,7 @@ export default function Home() {
           
         </s.Container>
       </s.Container>
+      </ResponsiveWrapper>
     </s.Screen >
   );
 }
