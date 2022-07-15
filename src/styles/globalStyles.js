@@ -65,12 +65,45 @@ export const TextSubTitle = styled.p`
 
 export const TextDescription = styled.p`
   color: var(--primary-text);
-  font-size: 16px;
+  font-size: 50px;
   line-height: 1.6;
-  @media (min-width: 900px) {
-    fontSize:50;
+  @media (min-width: 800px) {
+    font-size:70px;
   }
 `;
+export const TitleDescription = styled.p`
+  color: var(--primary-text);
+  font-size: 25px;
+  line-height:1.6;
+  @media (min-width: 800px) {
+    font-size: 40px;
+  }
+`;
+export const SmallDescription = styled.p`
+  color: var(--primary-text);
+  font-size: 20px;
+  line-height:1.6;
+  @media (min-width: 800px) {
+    font-size: 30px;
+  }
+`;
+
+export const HomeTitle = styled.p`
+color: var(--secondary-text);
+font-size: 50px;
+line-height:1.6;
+@media (min-width: 800px) {
+  font-size: 200px;
+}
+`;
+
+export const HomeDescription = styled.p`
+color:var(--secondary-text);
+font-size: 35px
+line-height:1.6;
+@media (min-width:800px){
+  font-size:50px;
+}`
 
 export const StyledClickable = styled.div`
   :active {

@@ -140,7 +140,7 @@ export const TransparentStyledLogo = styled.img`
 `;
 export const TransparentStyledTitle = styled.img`
   width: 200px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 300px;
   }
   @media (min-width: 1000px) {
@@ -322,20 +322,27 @@ export default function Home() {
             image={CONFIG.SHOW_BACKGROUND ? "/config/images/banner.png" : null}>
             <s.SpacerLarge />
             <TransparentStyledLogo src="./config/images/logoShiny.png" />
-            <TransparentStyledTitle src="./config/images/Title.png" />
+
+            <s.HomeTitle>
+              Tamashhi
+            </s.HomeTitle>
+            <s.HomeDescription>
+              Find your soul
+            </s.HomeDescription>
+
             <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
-                        <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
-                      </MediaStyledLink>
-                      <s.SpacerSmall />
-                      <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
-                        <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
-                      </MediaStyledLink>
-                      <s.SpacerSmall />
-                      <MediaStyledLink href="https://opensea.io/tamashhi" target="_blank">
-                        <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
-                      </MediaStyledLink>
-                    </s.Container>
+              <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
+                <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
+              </MediaStyledLink>
+              <s.SpacerSmall />
+              <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
+                <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
+              </MediaStyledLink>
+              <s.SpacerSmall />
+              <MediaStyledLink href="https://opensea.io/tamashhi" target="_blank">
+                <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
+              </MediaStyledLink>
+            </s.Container>
           </s.Container>
           <s.Container
             flex={1}
@@ -353,52 +360,45 @@ export default function Home() {
                 <s.TextDescription style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
-                  fontSize: 50,
                 }}>
                   Tamashhi NFT
                 </s.TextDescription>
-                <s.TextDescription style={{
+                <s.TitleDescription style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
-                  fontSize: 35,
                 }}>
                   Supply
-                </s.TextDescription>
-                <s.TextDescription style={{
+                </s.TitleDescription>
+                <s.SmallDescription style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
-                  fontSize: 20,
                 }}>
                   7,777
-                </s.TextDescription>
-                <s.TextDescription style={{
+                </s.SmallDescription>
+                <s.TitleDescription style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
-                  fontSize: 35,
                 }}>
                   Utility
-                </s.TextDescription>
-                <s.TextDescription style={{
+                </s.TitleDescription>
+                <s.SmallDescription style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
-                  fontSize: 20,
                 }}>
                   ???
-                </s.TextDescription>
-                <s.TextDescription style={{
+                </s.SmallDescription>
+                <s.TitleDescription style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
-                  fontSize: 35,
                 }}>
                   Story
-                </s.TextDescription>
-                <s.TextDescription style={{
+                </s.TitleDescription>
+                <s.SmallDescription style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
-                  fontSize: 20,
                 }}>
                   ???
-                </s.TextDescription>
+                </s.SmallDescription>
               </s.Container>
 
               <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
