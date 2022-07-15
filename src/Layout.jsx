@@ -129,10 +129,10 @@ export const MedStyledImg = styled.img`
 export const TransparentStyledLogo = styled.img`
   width: 200px;
   @media (min-width: 900px) {
-    width: 250px;
+    width: 150px;
   }
   @media (min-width: 1000px) {
-    width: 300px;
+    width: 125px;
   }
 `;
 export const SmallTranStyledLogo = styled.img`
@@ -300,42 +300,18 @@ export default function Layout() {
             image={CONFIG.SHOW_BACKGROUND ? "/config/images/navbar.png" : null}>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <ResponsiveWrapper>
-            <MediaStyledLink href="/" >
-              <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 35,
-              }}>
-                Home
-              </s.TextDescription>
-            </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <MediaStyledLink href="/About" >
-              <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 35,
-              }}>
-                About
-              </s.TextDescription>
-            </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <MediaStyledLink href="/Staking" >
-              <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 35,
-              }}>
-                Staking
-              </s.TextDescription>
-            </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <MediaStyledLink href="/Mint" >
-              <s.TextDescription style={{
-                textAlign: "center",
-                color: "var(--secondary-text)",
-                fontSize: 35,
-              }}>
-                Mint
-              </s.TextDescription>
-            </MediaStyledLink>
+              <MediaStyledLink href="/" >
+                <TransparentStyledLogo src="./config/images/Home.png" />
+              </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <MediaStyledLink href="/About" >
+                <TransparentStyledLogo src="./config/images/About.png" />
+              </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <MediaStyledLink href="/Staking" >
+                <TransparentStyledLogo src="./config/images/Staking.png" />
+              </MediaStyledLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <MediaStyledLink href="/Mint" >
+                <TransparentStyledLogo src="./config/images/Mint.png" />
+              </MediaStyledLink>
             </ResponsiveWrapper>
           </s.Container>
 

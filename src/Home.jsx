@@ -62,6 +62,7 @@ export const ResponsiveWrapper = styled.div`
   width: 100%;
   @media (min-width: 767px) {
     flex-direction: row;
+    fontSize: 50;
   }
 `;
 
@@ -135,6 +136,15 @@ export const TransparentStyledLogo = styled.img`
   }
   @media (min-width: 1000px) {
     width: 300px;
+  }
+`;
+export const TransparentStyledTitle = styled.img`
+  width: 400px;
+  @media (min-width: 900px) {
+    width: 400px;
+  }
+  @media (min-width: 1000px) {
+    width: 800px;
   }
 `;
 export const SmallTranStyledLogo = styled.img`
@@ -307,28 +317,11 @@ export default function Home() {
             padding: 24,
             borderRadius: 0,
             border: "2px solid var(--border)",
-            boxShadow: "0px 5px 50px 2px rgba(0,0,0,0.7)"
           }}
           image={CONFIG.SHOW_BACKGROUND ? "/config/images/banner.png" : null}>
           <s.SpacerLarge />
           <TransparentStyledLogo src="./config/images/logoShiny.png"/>
-          <s.TextDescription style={{
-            textAlign: "center",
-            color: "var(--secondary-text)",
-            fontSize: 150,
-          }}>
-
-            Tamashhi
-          </s.TextDescription>
-          <s.TextDescription style={{
-            textAlign: "center",
-            color: "var(--secondary-text)",
-            fontSize: 50,
-          }}>
-
-            Find your soul
-          </s.TextDescription>
-          <s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge />
+          <TransparentStyledTitle src="./config/images/Title.png"/>
         </s.Container>
         <s.Container
           flex={1}

@@ -67,6 +67,9 @@ export const TextDescription = styled.p`
   color: var(--primary-text);
   font-size: 16px;
   line-height: 1.6;
+  @media (min-width: 900px) {
+    fontSize:50;
+  }
 `;
 
 export const StyledClickable = styled.div`
