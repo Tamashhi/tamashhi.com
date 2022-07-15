@@ -127,18 +127,18 @@ export const MedStyledImg = styled.img`
   transition: width 0.5s;
 `;
 export const TransparentStyledLogo = styled.img`
-  width: 200px;
+  width: 100px;
   @media (min-width: 900px) {
     width: 150px;
   }
   @media (min-width: 1000px) {
-    width: 125px;
+    width: 150px;
   }
 `;
 export const SmallTranStyledLogo = styled.img`
-  width: 100px;
+  width: 50px;
   @media (min-width: 900px) {
-    width: 10px;
+    width: 100px;
   }
   @media (min-width: 1000px) {
     width: 100px;
