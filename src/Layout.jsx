@@ -299,6 +299,7 @@ export default function Layout() {
 
             image={CONFIG.SHOW_BACKGROUND ? "/config/images/navbar.png" : null}>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ResponsiveWrapper>
             <MediaStyledLink href="/" >
               <s.TextDescription style={{
                 textAlign: "center",
@@ -335,6 +336,7 @@ export default function Layout() {
                 Mint
               </s.TextDescription>
             </MediaStyledLink>
+            </ResponsiveWrapper>
           </s.Container>
 
           <Outlet />
