@@ -66,6 +66,19 @@ export const ResponsiveWrapper = styled.div`
   }
 `;
 
+export const ResponsiveWrapper1 = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: stretched;
+  align-items: stretched;
+  width: 100%;
+  @media (min-width: 800px) {
+    flex-direction: column;
+    fontSize: 50;
+  }
+`;
+
 export const StyledLogo = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
   border: 4px var(--secondary);
@@ -331,7 +344,9 @@ export default function Home() {
             <s.HomeDescription>
               Find your soul
             </s.HomeDescription>
+            <ResponsiveWrapper1>
             <s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
+            </ResponsiveWrapper1>
             <s.Container ai={"center"} jc={"center"} fd={"row"}>
               <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
                 <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
