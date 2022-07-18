@@ -93,7 +93,7 @@ export const StyledImg = styled.img`
   border: 4px  var(--secondary);
   background-color: var(--accent);
   border-radius: 100%;
-  width: 200px;
+  width: 150px;
   @media (min-width: 900px) {
     width: 250px;
   }
@@ -357,12 +357,12 @@ export default function Home() {
             image={CONFIG.SHOW_BACKGROUND ? "/config/images/back.png" : null}>
             <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
               <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
-                <s.TextDescription style={{
+                <s.TamashhiTitle style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",
                 }}>
                   Tamashhi NFT
-                </s.TextDescription>
+                </s.TamashhiTitle>
                 <s.TitleDescription style={{
                   textAlign: "center",
                   color: "var(--secondary-text)",

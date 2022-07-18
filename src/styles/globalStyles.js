@@ -90,7 +90,7 @@ export const SmallDescription = styled.p`
 
 export const HomeTitle = styled.p`
 color: var(--secondary-text);
-font-size: 40px;
+font-size: 50px;
 line-height:1.6;
 @media (min-width: 800px) {
   font-size: 200px;
@@ -99,7 +99,16 @@ line-height:1.6;
 
 export const HomeDescription = styled.p`
 color:var(--secondary-text);
-font-size: 35px
+font-size: 20px;
+line-height:1.6;
+@media (min-width:800px){
+  font-size:50px;
+}
+`;
+
+export const TamashhiTitle = styled.p`
+color:var(--secondary-text);
+font-size: 35px;
 line-height:1.6;
 @media (min-width:800px){
   font-size:50px;
