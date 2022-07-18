@@ -438,7 +438,6 @@ export default function Home() {
             <s.SmallDescription style={{
               textAlign: "center",
               color: "var(--secondary-text)",
-              fontSize: 50,
             }}>
               More coming soon...
             </s.SmallDescription>
