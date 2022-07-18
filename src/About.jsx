@@ -197,7 +197,6 @@ export default function About() {
                 }}
                 image={"/config/images/banner.png"}>
                 <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-                    <s.SpacerLarge />
                     <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
                         <s.AboutTitle style={{
                             textAlign: "center",
@@ -206,7 +205,6 @@ export default function About() {
                             About Us
                         </s.AboutTitle>
                     </s.Container>
-                    <s.SpacerMedium />
                 </ResponsiveWrapper>
 
                 <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
