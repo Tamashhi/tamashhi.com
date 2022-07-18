@@ -195,7 +195,7 @@ export default function About() {
                     border: "2px solid var(--border)",
                     boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
                 }}
-                image={CONFIG.SHOW_BACKGROUND ? "/config/images/banner.png" : null}>
+                image={"/config/images/banner.png"}>
                 <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
                     <s.SpacerLarge />
                     <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
