@@ -418,13 +418,12 @@ export default function Home() {
               border: "2px solid var(--border)",
               boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
             }}>
-            <s.TextDescription style={{
+            <s.SmallDescription style={{
               textAlign: "center",
               color: "var(--secondary-text)",
-              fontSize: 50,
             }}>
               More coming soon...
-            </s.TextDescription>
+            </s.SmallDescription>
 
           </s.Container>
         </s.Container>

@@ -491,11 +491,6 @@ export default function Mint() {
             />
           </s.Container>
         </ResponsiveWrapper>
-        <s.SpacerMedium />
-        <s.SpacerLarge />
-
-        
-        <s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge />
       </s.Container>
     </s.Screen >
   );
