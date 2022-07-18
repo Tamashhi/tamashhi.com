@@ -90,7 +90,7 @@ export const SmallDescription = styled.p`
 
 export const HomeTitle = styled.p`
 color: var(--secondary-text);
-font-size: 50px;
+font-size: 40px;
 line-height:1.6;
 @media (min-width: 800px) {
   font-size: 200px;
