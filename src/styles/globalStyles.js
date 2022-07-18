@@ -110,6 +110,15 @@ line-height:1.6;
 }
 `;
 
+export const navbar = styled.p`
+color:var(--secondary-text);
+font-size: 20px;
+line-height:1.6;
+@media (min-width:800px){
+  font-size:40px;
+}
+`;
+
 export const HomeDescription = styled.p`
 color:var(--secondary-text);
 font-size: 20px;

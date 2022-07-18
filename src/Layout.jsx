@@ -180,133 +180,40 @@ export const StyledLink = styled.a`
   text-decoration: none;
 `;
 
+export const navbar = styled.p`
+color:var(--secondary-text);
+font-size: 20px;
+line-height:1.6;
+@media (min-width:800px){
+  font-size:40px;
+}
+`;
+
 export default function Layout() {
-  const dispatch = useDispatch();
-  const blockchain = useSelector((state) => state.blockchain);
-  const data = useSelector((state) => state.data);
-  const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`Mint up to 10`);
-  const [mintAmount, setMintAmount] = useState(1);
-  const [CONFIG, SET_CONFIG] = useState({
-    CONTRACT_ADDRESS: "",
-    SCAN_LINK: "",
-    NETWORK: {
-      NAME: "",
-      SYMBOL: "",
-      ID: 0,
-    },
-    NFT_NAME: "",
-    SYMBOL: "",
-    MAX_SUPPLY: 1,
-    maxMintPerTx: 0,
-    WEI_COST: 0,
-    DISPLAY_COST: 0,
-    GAS_LIMIT: 0,
-    MARKETPLACE: "",
-    MARKETPLACE_LINK: "",
-    SHOW_BACKGROUND: false,
-  });
-
-  const claimNFTs = () => {
-    let cost = CONFIG.WEI_COST;
-    let gasLimit = CONFIG.GAS_LIMIT;
-    let totalCostWei = String(cost * mintAmount);
-    let totalGasLimit = String(gasLimit * mintAmount);
-    console.log("Cost: ", totalCostWei);
-    console.log("Gas limit: ", totalGasLimit);
-    setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
-    setClaimingNft(true);
-    blockchain.smartContract.methods
-      .mint(mintAmount)
-      .send({
-        gasLimit: String(totalGasLimit),
-        to: CONFIG.CONTRACT_ADDRESS,
-        from: blockchain.account,
-        value: totalCostWei,
-      })
-      .once("error", (err) => {
-        console.log(err);
-        setFeedback("Sorry, you are not whitelisted.");
-        setClaimingNft(false);
-      })
-      .then((receipt) => {
-        console.log(receipt);
-        setFeedback(
-          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
-        );
-        setClaimingNft(false);
-        dispatch(fetchData(blockchain.account));
-      });
-  };
-
-  const userTokens = () => {
-    blockchain.smartContract.methods
-      .ownedTokens()
-      .call(function (err, res) {
-        if (err) {
-          console.log("An error occured", err)
-          return
-        }
-        console.log(res)
-      });
-  };
-
-  const decrementMintAmount = () => {
-    let newMintAmount = mintAmount - 1;
-    if (newMintAmount < 1) {
-      newMintAmount = 1;
-    }
-    setMintAmount(newMintAmount);
-  };
-
-  const incrementMintAmount = () => {
-    let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 10) {
-      newMintAmount = 10;
-    }
-    setMintAmount(newMintAmount);
-  };
-
-  const getData = () => {
-    if (blockchain.account !== "" && blockchain.smartContract !== null) {
-      dispatch(fetchData(blockchain.account));
-    }
-  };
-
-  const getConfig = async () => {
-    const configResponse = await fetch("/config/config.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
-    const config = await configResponse.json();
-    SET_CONFIG(config);
-  };
-
-  useEffect(() => {
-    getConfig();
-  }, []);
-
-  useEffect(() => {
-    getData();
-  }, [blockchain.account]);
   return (
     <ResponsiveWrapper flex={1}>
       <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
         <s.Screen>
           <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}
-            image={CONFIG.SHOW_BACKGROUND ? "/config/images/navbar.png" : null}>
+            image={"/config/images/navbar.png"}>
             <ResponsiveWrapper>
               <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
                 <MediaStyledLink href="/" >
-                  <TransparentStyledLogo src="./config/images/Home.png" />
+                  <s.navbar>
+                    Home
+                  </s.navbar>
                 </MediaStyledLink>
+                <s.SpacerLarge/>
                 <MediaStyledLink href="/About" >
-                  <TransparentStyledLogo src="./config/images/About.png" />
+                  <s.navbar>
+                    About
+                  </s.navbar>
                 </MediaStyledLink>
+                <s.SpacerLarge/>
                 <MediaStyledLink href="/Mint" >
-                  <TransparentStyledLogo src="./config/images/Mint.png" />
+                  <s.navbar>
+                    Mint
+                  </s.navbar>
                 </MediaStyledLink>
               </s.Container>
             </ResponsiveWrapper>
