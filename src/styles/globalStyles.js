@@ -103,7 +103,26 @@ font-size: 35px
 line-height:1.6;
 @media (min-width:800px){
   font-size:50px;
-}`
+}
+`;
+
+export const NormalText = styled.p`
+color:var (--secondary-text);
+font-size: 20px;
+line-height:1.6;
+@media (min-width:800px){
+  font-size:25px;
+}
+`;
+
+export const SmallText = styled.p`
+color:var (--secondary-text);
+font-size:17px;
+line-height:1.6;
+@media (min-width:800px){
+  font-size:20px;
+}
+`;
 
 export const StyledClickable = styled.div`
   :active {

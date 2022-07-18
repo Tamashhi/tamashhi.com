@@ -329,7 +329,7 @@ export default function Home() {
             <s.HomeDescription>
               Find your soul
             </s.HomeDescription>
-
+            <s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
             <s.Container ai={"center"} jc={"center"} fd={"row"}>
               <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
                 <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />

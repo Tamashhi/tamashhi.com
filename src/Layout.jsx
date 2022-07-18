@@ -305,9 +305,6 @@ export default function Layout() {
                 <MediaStyledLink href="/About" >
                   <TransparentStyledLogo src="./config/images/About.png" />
                 </MediaStyledLink>
-                <MediaStyledLink href="/Staking" >
-                  <TransparentStyledLogo src="./config/images/Staking.png" />
-                </MediaStyledLink>
                 <MediaStyledLink href="/Mint" >
                   <TransparentStyledLogo src="./config/images/Mint.png" />
                 </MediaStyledLink>

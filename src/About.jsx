@@ -304,210 +304,237 @@ export default function About() {
                     borderRadius: 0,
                     border: "2px solid var(--border)",
                     boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
-                  }}
+                }}
                 image={CONFIG.SHOW_BACKGROUND ? "/config/images/banner.png" : null}>
-            <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-                <s.SpacerLarge />
-                <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-                    <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" style={{ transform: "scaleX(-1)" }} />
-                    <s.TextDescription style={{
-                        textAlign: "center",
-                        color: "var(--secondary-text)",
-                        fontSize: 90,
-                    }}>
-                        About Us
-                    </s.TextDescription>
-                    <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
-                </s.Container>
-                <s.SpacerMedium />
-            </ResponsiveWrapper>
-
-            <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-                <s.Container flex={2} jc={"center"} ai={"center"}  style={{ backgroundColor: "var(--primary)", borderRadius: 24, border: "2px solid var(--border)", padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-                    <MedStyledImg alt="Ish" src="/config/images/Ish.jpg" />
+                <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
                     <s.SpacerLarge />
-                    <s.Container flex={2} jc={"center"} ai={"center"}>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                textDecoration: "underline 2px",
-                                fontSize: 20
-                            }}>
-                            Ish Jogee
-                        </s.TextDescription>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                fontSize: 20,
-                                fontWeight: "bold"
-                            }}>
-                            イシュ ジョジ
-                        </s.TextDescription>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                fontSize: 25
-                            }}>
-                            Owner
-                        </s.TextDescription>
-                        <s.TextDescription style={{
+                    <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+                        <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" style={{ transform: "scaleX(-1)" }} />
+                        <s.NormalText style={{
                             textAlign: "center",
-                            color: "var(--secondary-text)"
+                            color: "var(--secondary-text)",
+                            fontSize: 90,
                         }}>
-                            Japanese wagyu seller and property entrepreneur. Been in crypto since 2017.
-                        </s.TextDescription>
+                            About Us
+                        </s.NormalText>
+                        <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
                     </s.Container>
-                </s.Container>
-                <s.SpacerLarge />
+                    <s.SpacerMedium />
+                </ResponsiveWrapper>
 
-
-                <s.Container flex={2} jc={"center"} ai={"center"} style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-                    <MedStyledImg alt="Callum" src="/config/images/Callum.jpg" />
+                <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+                    <s.Container flex={2} jc={"center"} ai={"center"}
+                        style={{
+                            backgroundColor: "var(--primary)",
+                            borderRadius: 24, border: "2px solid var(--border)",
+                            padding: 24,
+                            boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+                        }}>
+                        <MedStyledImg alt="Ish" src="/config/images/Ish.jpg" />
+                        <s.SpacerLarge />
+                        <s.Container flex={2} jc={"center"} ai={"center"}>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    textDecoration: "underline 2px",
+                                    fontSize: 20
+                                }}>
+                                Ish Jogee
+                            </s.NormalText>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    fontSize: 20,
+                                    fontWeight: "bold"
+                                }}>
+                                イシュ ジョジ
+                            </s.NormalText>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    fontSize: 25
+                                }}>
+                                Owner
+                            </s.NormalText>
+                            <s.SmallText style={{
+                                textAlign: "center",
+                                color: "var(--secondary-text)"
+                            }}>
+                                Japanese wagyu seller and property entrepreneur. Been in crypto since 2017.
+                            </s.SmallText>
+                        </s.Container>
+                    </s.Container>
                     <s.SpacerLarge />
-                    <s.Container flex={2} jc={"center"} ai={"center"}>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                textDecoration: "underline 2px",
-                                fontSize: 20
-                            }}>
-                            Callum Sidebottom
-                        </s.TextDescription>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                fontSize: 20,
-                                fontWeight: "bold"
-                            }}>
-                            カラム シデボットム
-                        </s.TextDescription>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                fontSize: 25
-                            }}>
-                            Developer
-                        </s.TextDescription>
-                        <s.TextDescription style={{
-                            textAlign: "center",
-                            color: "var(--secondary-text)"
+
+
+                    <s.Container flex={2} jc={"center"} ai={"center"}
+                        style={{
+                            backgroundColor: "var(--primary)",
+                            border: "2px solid var(--border)",
+                            borderRadius: 24,
+                            padding: 24,
+                            boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
                         }}>
-                            Always been obsessed with programming and recently been getting into crypto, wish i had joined sooner!
-                        </s.TextDescription>
+                        <MedStyledImg alt="Callum" src="/config/images/Callum.jpg" />
+                        <s.SpacerLarge />
+                        <s.Container flex={2} jc={"center"} ai={"center"}>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    textDecoration: "underline 2px",
+                                    fontSize: 20
+                                }}>
+                                Callum Sidebottom
+                            </s.NormalText>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    fontSize: 20,
+                                    fontWeight: "bold"
+                                }}>
+                                カラム シデボットム
+                            </s.NormalText>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    fontSize: 25
+                                }}>
+                                Developer
+                            </s.NormalText>
+                            <s.SmallText style={{
+                                textAlign: "center",
+                                color: "var(--secondary-text)"
+                            }}>
+                                Always been obsessed with programming and recently been getting into crypto, wish i had joined sooner!
+                            </s.SmallText>
+                        </s.Container>
                     </s.Container>
-                </s.Container>
-                <s.SpacerLarge />
-
-
-                <s.Container flex={2} jc={"center"} ai={"center"}  style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-                    <MedStyledImg alt="Naomi" src="/config/images/Naomi.jpg" />
                     <s.SpacerLarge />
-                    <s.Container flex={2} jc={"center"} ai={"center"}>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                textDecoration: "underline 2px",
-                                fontSize: 20
-                            }}>
-                            Naomi Pitt
-                        </s.TextDescription>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                fontSize: 20,
-                                fontWeight: "bold"
-                            }}>
-                            ナオミ ピト
-                        </s.TextDescription>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                fontSize: 25
-                            }}>
-                            Artist
-                        </s.TextDescription>
-                        <s.TextDescription style={{
-                            textAlign: "center",
-                            color: "var(--secondary-text)"
+
+
+                    <s.Container flex={2} jc={"center"} ai={"center"}
+                        style={{
+                            backgroundColor: "var(--primary)",
+                            border: "2px solid var(--border)",
+                            borderRadius: 24,
+                            padding: 24,
+                            boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
                         }}>
-                            A simplistic doodler with a passion to create something beautiful
-                        </s.TextDescription>
+                        <MedStyledImg alt="Naomi" src="/config/images/Naomi.jpg" />
+                        <s.SpacerLarge />
+                        <s.Container flex={2} jc={"center"} ai={"center"}>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    textDecoration: "underline 2px",
+                                    fontSize: 20
+                                }}>
+                                Naomi Pitt
+                            </s.NormalText>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    fontSize: 20,
+                                    fontWeight: "bold"
+                                }}>
+                                ナオミ ピト
+                            </s.NormalText>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    fontSize: 25
+                                }}>
+                                Artist
+                            </s.NormalText>
+                            <s.SmallText style={{
+                                textAlign: "center",
+                                color: "var(--secondary-text)"
+                            }}>
+                                A simplistic doodler with a passion to create something beautiful
+                            </s.SmallText>
+                        </s.Container>
                     </s.Container>
-                </s.Container>
-                <s.SpacerLarge />
-
-
-                <s.Container flex={2} jc={"center"} ai={"center"}  style={{ backgroundColor: "var(--primary)", border: "2px solid var(--border)", borderRadius: 24, padding: 24, boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)" }}>
-                    <MedStyledImg alt="Luke" src="/config/images/Luke.jpg" />
                     <s.SpacerLarge />
-                    <s.Container flex={2} jc={"center"} ai={"center"}>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                textDecoration: "underline 2px",
-                                fontSize: 20
-                            }}>
-                            Luke Smith
-                        </s.TextDescription>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                fontSize: 20,
-                                fontWeight: "bold"
-                            }}>
-                            ルーク スミス
-                        </s.TextDescription>
-                        <s.TextDescription
-                            style={{
-                                textAlign: "center",
-                                color: "var(--secondary-text)",
-                                fontSize: 25
-                            }}>
-                            Social Media/Artist
-                        </s.TextDescription>
-                        <s.TextDescription style={{
-                            textAlign: "center",
-                            color: "var(--secondary-text)"
-                        }}>
-                            A graphic designer who visualizes the world you live in with a different perspective in every project .
 
-                        </s.TextDescription>
+
+                    <s.Container flex={2} jc={"center"} ai={"center"}
+                        style={{
+                            backgroundColor: "var(--primary)",
+                            border: "2px solid var(--border)",
+                            borderRadius: 24,
+                            padding: 24,
+                            boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+                        }}>
+                        <MedStyledImg alt="Luke" src="/config/images/Luke.jpg" />
+                        <s.SpacerLarge />
+                        <s.Container flex={2} jc={"center"} ai={"center"}>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    textDecoration: "underline 2px",
+                                    fontSize: 20
+                                }}>
+                                Luke Smith
+                            </s.NormalText>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    fontSize: 20,
+                                    fontWeight: "bold"
+                                }}>
+                                ルーク スミス
+                            </s.NormalText>
+                            <s.NormalText
+                                style={{
+                                    textAlign: "center",
+                                    color: "var(--secondary-text)",
+                                    fontSize: 25
+                                }}>
+                                Social Media/Artist
+                            </s.NormalText>
+                            <s.SmallText style={{
+                                textAlign: "center",
+                                color: "var(--secondary-text)"
+                            }}>
+                                A graphic designer who visualizes the world you live in with a different perspective in every project .
+
+                            </s.SmallText>
+                        </s.Container>
                     </s.Container>
-                </s.Container>
-            </ResponsiveWrapper>
-            <s.SpacerLarge />
-            <ResponsiveWrapper flex={1} style={{ padding: 1 }} test>
+                </ResponsiveWrapper>
                 <s.SpacerLarge />
-                <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-                    <s.TextDescription style={{
-                        textAlign: "center",
-                        color: "var(--secondary-text)",
-                        fontSize: 25
-                    }}>
-                        More info over on discord!
-                    </s.TextDescription>
-                    <s.SpacerXSmall />
-                </s.Container>
-                <s.SpacerMedium />
-            </ResponsiveWrapper>
-            <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
-                <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-                    <MediaStyledLink href="https://discord.gg/hbRhGS5Crk" target="_blank">
-                        <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
-                    </MediaStyledLink>
-                </s.Container>
-            </ResponsiveWrapper>
+                <ResponsiveWrapper flex={1} style={{ padding: 1 }} test>
+                    <s.SpacerLarge />
+                    <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+                        <s.NormalText style={{
+                            textAlign: "center",
+                            color: "var(--secondary-text)",
+                            fontSize: 25
+                        }}>
+                            More info over on discord!
+                        </s.NormalText>
+                        <s.SpacerXSmall />
+                    </s.Container>
+                    <s.SpacerMedium />
+                </ResponsiveWrapper>
+                <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+                    <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+                        <MediaStyledLink href="https://discord.gg/hbRhGS5Crk" target="_blank">
+                            <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
+                        </MediaStyledLink>
+                    </s.Container>
+                </ResponsiveWrapper>
             </s.Container>
         </s.Screen >
     );

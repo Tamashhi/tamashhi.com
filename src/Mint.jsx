@@ -342,10 +342,10 @@ export default function Mint() {
                   style={{ textAlign: "center", color: "var(--accent-text)" }}>
                   Sold out.
                 </s.TextTitle>
-                <s.TextDescription
+                <s.NormalText
                   style={{ textAlign: "center", color: "var(--accent-text)" }}>
                   You can still find {CONFIG.NFT_NAME} on
-                </s.TextDescription>
+                </s.NormalText>
                 <s.SpacerSmall />
                 <StyledLink target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
                   {CONFIG.MARKETPLACE}
@@ -359,21 +359,21 @@ export default function Mint() {
                   Mint for {CONFIG.DISPLAY_COST}{CONFIG.NETWORK.SYMBOL} each.
                 </s.TextTitle>
                 <s.SpacerXSmall />
-                <s.TextDescription
+                <s.NormalText
                   style={{ textAlign: "center", color: "var(--accent-text)"}}>
                   Plus reduced gas fees for multiple mints!
-                </s.TextDescription>
+                </s.NormalText>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
                   blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
-                    <s.TextDescription
+                    <s.NormalText
                       style={{
                         textAlign: "center",
                         color: "var(--accent-text)", 
                       }}>
                       Connect your MetaMask wallet
-                    </s.TextDescription>
+                    </s.NormalText>
                     <s.SpacerSmall />
                     <StyledButton
                       onClick={(e) => {
@@ -386,13 +386,13 @@ export default function Mint() {
                     {blockchain.errorMsg !== "" ? (
                       <>
                         <s.SpacerSmall />
-                        <s.TextDescription
+                        <s.NormalText
                           style={{
                             textAlign: "center",
                             color: "var(--accent-text)"
                           }}>
                           {blockchain.errorMsg}
-                        </s.TextDescription>
+                        </s.NormalText>
                       </>
                     ) : null}
 
@@ -414,13 +414,13 @@ export default function Mint() {
                   </s.Container>
             ) : (
               <>
-                <s.TextDescription
+                <s.NormalText
                   style={{
                     textAlign: "center",
                     color: "var(--accent-text)"
                   }}>
                   {feedback}
-                </s.TextDescription>
+                </s.NormalText>
                 <s.SpacerMedium />
                 <s.Container ai={"center"} jc={"center"} fd={"row"}>
                 <StyledRoundButton
@@ -433,13 +433,13 @@ export default function Mint() {
                     -
                   </StyledRoundButton>
                   <s.SpacerMedium />
-                  <s.TextDescription
+                  <s.NormalText
                     style={{
                       textAlign: "center",
                       color: "var(--accent-text)"
                     }}>
                     {mintAmount}
-                  </s.TextDescription>
+                  </s.NormalText>
                   <s.SpacerMedium />
                   <StyledRoundButton
                     disabled={claimingNft ? 1 : 0}
