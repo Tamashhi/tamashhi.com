@@ -60,7 +60,7 @@ export const ResponsiveWrapper = styled.div`
   justify-content: stretched;
   align-items: stretched;
   width: 100%;
-  @media (min-width: 767px) {
+  @media (min-width: 1100px) {
     flex-direction: row;
   }
 `;
@@ -309,13 +309,12 @@ export default function About() {
                 <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
                     <s.SpacerLarge />
                     <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-                        <s.NormalText style={{
+                        <s.AboutTitle style={{
                             textAlign: "center",
                             color: "var(--secondary-text)",
-                            fontSize: 90,
                         }}>
                             About Us
-                        </s.NormalText>
+                        </s.AboutTitle>
                     </s.Container>
                     <s.SpacerMedium />
                 </ResponsiveWrapper>

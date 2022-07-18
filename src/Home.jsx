@@ -72,7 +72,7 @@ export const StyledLogo = styled.img`
   background-color: var(--accent);
   border-radius: 100%;
   width: 200px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 250px;
   }
   @media (min-width: 1000px) {
@@ -94,7 +94,7 @@ export const StyledImg = styled.img`
   background-color: var(--accent);
   border-radius: 100%;
   width: 150px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 250px;
   }
   @media (min-width: 1000px) {
@@ -108,7 +108,7 @@ export const SmallStyledImg = styled.img`
   background-color: var(--accent);
   border-radius: 100%;
   width: 50px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 50px;
   }
   @media (min-width: 1000px) {
@@ -121,7 +121,7 @@ export const MedStyledImg = styled.img`
   background-color: var(--accent);
   border-radius: 100%;
   width: 200px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 200px;
   }
   @media (min-width: 1000px) {
@@ -131,12 +131,13 @@ export const MedStyledImg = styled.img`
 `;
 export const TransparentStyledLogo = styled.img`
   width: 200px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 250px;
   }
   @media (min-width: 1000px) {
     width: 300px;
   }
+  transition: width 0.5s;
 `;
 export const TransparentStyledTitle = styled.img`
   width: 200px;
@@ -149,12 +150,13 @@ export const TransparentStyledTitle = styled.img`
 `;
 export const SmallTranStyledLogo = styled.img`
   width: 100px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 10px;
   }
   @media (min-width: 1000px) {
     width: 100px;
   }
+  transition: width 0.5s;
 `;
 export const RMStyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
@@ -162,7 +164,7 @@ export const RMStyledImg = styled.img`
   background-color: var(--accent);
   border-radius: 10%;
   width: 50px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 100px;
   }
   @media (min-width: 1000px) {
@@ -175,7 +177,7 @@ export const TallRMStyledImg = styled.img`
   border: 2px solid var(--border);
   border-radius: 100px;
   width: 50px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 50px;
   }
   @media (min-width: 1000px) {
@@ -421,6 +423,7 @@ export default function Home() {
             <s.SmallDescription style={{
               textAlign: "center",
               color: "var(--secondary-text)",
+              fontSize: 50,
             }}>
               More coming soon...
             </s.SmallDescription>

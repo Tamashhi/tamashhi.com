@@ -93,7 +93,20 @@ color: var(--secondary-text);
 font-size: 50px;
 line-height:1.6;
 @media (min-width: 800px) {
+  font-size: 100px;
+}
+@media (min-width: 1000px) {
   font-size: 200px;
+}
+transition: width 0.5s;
+`;
+
+export const AboutTitle = styled.p`
+color: var(--secondary-text);
+font-size: 50px;
+line-height:1.6;
+@media (min-width: 800px) {
+  font-size: 100px;
 }
 `;
 
