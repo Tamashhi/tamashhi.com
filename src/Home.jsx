@@ -345,7 +345,7 @@ export default function Home() {
               Find your soul
             </s.HomeDescription>
             <ResponsiveWrapper1>
-            <s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/><s.SpacerLarge/>
+              <s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge />
             </ResponsiveWrapper1>
             <s.Container ai={"center"} jc={"center"} fd={"row"}>
               <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
@@ -418,9 +418,13 @@ export default function Home() {
                 </s.SmallDescription>
               </s.Container>
 
-              <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+              <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
                 <MediaStyledLink href="/Mint">
                   <StyledImg alt="example" src="/config/images/Callum.jpg" />
+                </MediaStyledLink>
+                <s.SpacerMedium/>
+                <MediaStyledLink href="/Mint">
+                  <StyledImg alt="example" src="/config/images/Ish.jpg" />
                 </MediaStyledLink>
               </s.Container>
             </s.Container>
