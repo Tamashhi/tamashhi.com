@@ -309,7 +309,6 @@ export default function About() {
                 <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
                     <s.SpacerLarge />
                     <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-                        <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" style={{ transform: "scaleX(-1)" }} />
                         <s.NormalText style={{
                             textAlign: "center",
                             color: "var(--secondary-text)",
@@ -317,7 +316,6 @@ export default function About() {
                         }}>
                             About Us
                         </s.NormalText>
-                        <SmallTranStyledLogo alt="Logo" src="/config/images/logoShiny.png" />
                     </s.Container>
                     <s.SpacerMedium />
                 </ResponsiveWrapper>
