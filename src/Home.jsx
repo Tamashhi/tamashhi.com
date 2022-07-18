@@ -422,7 +422,7 @@ export default function Home() {
                 <MediaStyledLink href="/Mint">
                   <StyledImg alt="example" src="/config/images/Callum.jpg" />
                 </MediaStyledLink>
-                <s.SpacerMedium/>
+                <s.SpacerMedium />
                 <MediaStyledLink href="/Mint">
                   <StyledImg alt="example" src="/config/images/Ish.jpg" />
                 </MediaStyledLink>
@@ -431,7 +431,9 @@ export default function Home() {
           </s.Container>
           <s.Container
             flex={1}
+            jc={"center"}
             ai={"center"}
+            fd={"row"}
             style={{
               backgroundColor: "var(--primary)",
               padding: 24,
@@ -439,13 +441,27 @@ export default function Home() {
               border: "2px solid var(--border)",
               boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
             }}>
+
             <s.SmallDescription style={{
               textAlign: "center",
               color: "var(--secondary-text)",
             }}>
-              More coming soon...
+              More coming soon.
             </s.SmallDescription>
-
+            <StyledLink href="/Hidden">
+            <s.SmallDescription style={{
+              textAlign: "center",
+              color: "var(--secondary-text)",
+            }}>
+              .
+            </s.SmallDescription>
+            </StyledLink>
+            <s.SmallDescription style={{
+              textAlign: "center",
+              color: "var(--secondary-text)",
+            }}>
+              .
+            </s.SmallDescription>
           </s.Container>
         </s.Container>
       </ResponsiveWrapper>
