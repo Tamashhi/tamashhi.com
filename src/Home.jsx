@@ -250,8 +250,10 @@ export default function Home() {
               </MediaStyledLink>
             </s.Container>
           </s.Container>
+
           <s.Container
             flex={1}
+            jc={"center"}
             ai={"center"}
             style={{
               backgroundColor: "var(--primary)",
@@ -305,6 +307,14 @@ export default function Home() {
                 }}>
                   ???
                 </s.SmallDescription>
+                <StyledLink href={"/Tamashhi"}>
+                <s.TitleDescription style={{
+                  textAlign: "center",
+                  color: "var(--secondary-text)",
+                }}>
+                  See More
+                </s.TitleDescription>
+                </StyledLink>
               </s.Container>
 
               <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
@@ -318,6 +328,7 @@ export default function Home() {
               </s.Container>
             </s.Container>
           </s.Container>
+
           <s.Container
             flex={1}
             jc={"center"}
@@ -338,12 +349,12 @@ export default function Home() {
               More coming soon.
             </s.SmallDescription>
             <StyledLink href="/Hidden">
-            <s.SmallDescription style={{
-              textAlign: "center",
-              color: "var(--secondary-text)",
-            }}>
-              .
-            </s.SmallDescription>
+              <s.SmallDescription style={{
+                textAlign: "center",
+                color: "var(--secondary-text)",
+              }}>
+                .
+              </s.SmallDescription>
             </StyledLink>
             <s.SmallDescription style={{
               textAlign: "center",
