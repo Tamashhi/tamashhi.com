@@ -5,6 +5,7 @@ import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
+import { Container } from 'react-bootstrap';
 
 export const StyledButton = styled.button`
   padding: 10px;
@@ -203,19 +204,19 @@ export default function Layout() {
                     Home
                   </s.navbar>
                 </MediaStyledLink>
-                <s.SpacerLarge/>
+                <s.SpacerLarge />
                 <MediaStyledLink href="/About" >
                   <s.navbar>
                     About
                   </s.navbar>
                 </MediaStyledLink>
-                <s.SpacerLarge/>
+                <s.SpacerLarge />
                 <MediaStyledLink href="/Roadmap" >
                   <s.navbar>
                     Roadmap
                   </s.navbar>
                 </MediaStyledLink>
-                <s.SpacerLarge/>
+                <s.SpacerLarge />
                 <MediaStyledLink href="/Mint" >
                   <s.navbar>
                     Mint
@@ -224,9 +225,7 @@ export default function Layout() {
               </s.Container>
             </ResponsiveWrapper>
           </s.Container>
-
           <Outlet />
-
         </s.Screen>
       </s.Container >
     </ResponsiveWrapper >

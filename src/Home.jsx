@@ -308,12 +308,12 @@ export default function Home() {
                   ???
                 </s.SmallDescription>
                 <StyledLink href={"/Tamashhi"}>
-                <s.TitleDescription style={{
-                  textAlign: "center",
-                  color: "var(--secondary-text)",
-                }}>
-                  See More
-                </s.TitleDescription>
+                  <s.TitleDescription style={{
+                    textAlign: "center",
+                    color: "var(--secondary-text)",
+                  }}>
+                    See More
+                  </s.TitleDescription>
                 </StyledLink>
               </s.Container>
 

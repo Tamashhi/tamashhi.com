@@ -5,6 +5,7 @@ import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 
+
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
 
@@ -184,11 +185,11 @@ export const StyledLink = styled.a`
 
 
 export default function Mint() {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`Mint up to 10`);
+  const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
@@ -201,7 +202,6 @@ export default function Mint() {
     NFT_NAME: "",
     SYMBOL: "",
     MAX_SUPPLY: 1,
-    maxMintPerTx: 0,
     WEI_COST: 0,
     DISPLAY_COST: 0,
     GAS_LIMIT: 0,
@@ -229,7 +229,7 @@ export default function Mint() {
       })
       .once("error", (err) => {
         console.log(err);
-        setFeedback("Sorry, something went wrong.");
+        setFeedback("Sorry, something went wrong please try again later.");
         setClaimingNft(false);
       })
       .then((receipt) => {
@@ -239,18 +239,6 @@ export default function Mint() {
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
-      });
-  };
-
-  const userTokens = () => {
-    blockchain.smartContract.methods
-    .ownedTokens()
-    .call(function (err, res) {
-      if (err) {
-        console.log("An error occured", err)
-        return
-      }
-      console.log(res)
       });
   };
 
@@ -334,14 +322,37 @@ export default function Mint() {
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
             }}>
               <s.SpacerLarge/><s.SpacerLarge/>
-              {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
+              <s.NormalText
+              style={{
+                textAlign: "center",
+                fontSize: 50,
+                fontWeight: "bold",
+                color: "var(--accent-text)",
+              }}
+            >
+              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+            </s.NormalText>
+            <s.NormalText
+              style={{
+                textAlign: "center",
+                color: "var(--primary-text)",
+              }}
+            >
+              <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
+                {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
+              </StyledLink>
+            </s.NormalText>
+            <s.SpacerSmall />
+            {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
               <>
-                <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}>
-                  Sold out.
-                </s.TextTitle>
                 <s.NormalText
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}>
+                  style={{ textAlign: "center", color: "var(--accent-text)" }}
+                >
+                  The sale has ended.
+                </s.NormalText>
+                <s.NormalText
+                  style={{ textAlign: "center", color: "var(--accent-text)" }}
+                >
                   You can still find {CONFIG.NFT_NAME} on
                 </s.NormalText>
                 <s.SpacerSmall />
@@ -351,26 +362,29 @@ export default function Mint() {
               </>
             ) : (
               <>
-                <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)"}}
+                <s.NormalText
+                  style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  Mint for {CONFIG.DISPLAY_COST}{CONFIG.NETWORK.SYMBOL} each.
-                </s.TextTitle>
+                  1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
+                  {CONFIG.NETWORK.SYMBOL}.
+                </s.NormalText>
                 <s.SpacerXSmall />
                 <s.NormalText
-                  style={{ textAlign: "center", color: "var(--accent-text)"}}>
-                  Plus reduced gas fees for multiple mints!
+                  style={{ textAlign: "center", color: "var(--accent-text)" }}
+                >
+                  Excluding gas fees.
                 </s.NormalText>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
-                  blockchain.smartContract === null ? (
+                blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
                     <s.NormalText
                       style={{
                         textAlign: "center",
-                        color: "var(--accent-text)", 
-                      }}>
-                      Connect your MetaMask wallet
+                        color: "var(--accent-text)",
+                      }}
+                    >
+                      Connect to the {CONFIG.NETWORK.NAME} network
                     </s.NormalText>
                     <s.SpacerSmall />
                     <StyledButton
@@ -378,7 +392,8 @@ export default function Mint() {
                         e.preventDefault();
                         dispatch(connect());
                         getData();
-                      }}>
+                      }}
+                    >
                       CONNECT
                     </StyledButton>
                     {blockchain.errorMsg !== "" ? (
@@ -387,99 +402,74 @@ export default function Mint() {
                         <s.NormalText
                           style={{
                             textAlign: "center",
-                            color: "var(--accent-text)"
-                          }}>
+                            color: "var(--accent-text)",
+                          }}
+                        >
                           {blockchain.errorMsg}
                         </s.NormalText>
                       </>
                     ) : null}
-
-
+                  </s.Container>
+                ) : (
+                  <>
+                    <s.NormalText
+                      style={{
+                        textAlign: "center",
+                        color: "var(--accent-text)",
+                      }}
+                    >
+                      {feedback}
+                    </s.NormalText>
                     <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
-                        <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
-                      </MediaStyledLink>
-                      <s.SpacerSmall />
-                      <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
-                        <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
-                      </MediaStyledLink>
-                      <s.SpacerSmall />
-                      <MediaStyledLink href="https://opensea.io/tamashhi" target="_blank">
-                        <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
-                      </MediaStyledLink>
+                      <StyledRoundButton
+                        style={{ lineHeight: 0.4 }}
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          decrementMintAmount();
+                        }}
+                      >
+                        -
+                      </StyledRoundButton>
+                      <s.SpacerMedium />
+                      <s.NormalText
+                        style={{
+                          textAlign: "center",
+                          color: "var(--accent-text)",
+                        }}
+                      >
+                        {mintAmount}
+                      </s.NormalText>
+                      <s.SpacerMedium />
+                      <StyledRoundButton
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          incrementMintAmount();
+                        }}
+                      >
+                        +
+                      </StyledRoundButton>
                     </s.Container>
-                  </s.Container>
-            ) : (
-              <>
-                <s.NormalText
-                  style={{
-                    textAlign: "center",
-                    color: "var(--accent-text)"
-                  }}>
-                  {feedback}
-                </s.NormalText>
-                <s.SpacerMedium />
-                <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                <StyledRoundButton
-                    style={{ lineHeight: 0.4 }}
-                    disabled={claimingNft ? 1 : 0}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      decrementMintAmount();
-                    }}>
-                    -
-                  </StyledRoundButton>
-                  <s.SpacerMedium />
-                  <s.NormalText
-                    style={{
-                      textAlign: "center",
-                      color: "var(--accent-text)"
-                    }}>
-                    {mintAmount}
-                  </s.NormalText>
-                  <s.SpacerMedium />
-                  <StyledRoundButton
-                    disabled={claimingNft ? 1 : 0}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      incrementMintAmount();
-                    }}>
-                    +
-                  </StyledRoundButton>
-                </s.Container>
-                <s.SpacerSmall />
-                <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                  <StyledButton
-                    disabled={claimingNft ? 1 : 0}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      claimNFTs();
-                      getData();
-                    }}>
-                    {claimingNft ? "BUSY" : "BUY"}
-                  </StyledButton>
-                </s.Container>
-
-
-                <s.SpacerMedium />
-                <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                  <MediaStyledLink href="https://twitter.com/Tamashhi" target="_blank" >
-                    <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
-                  </MediaStyledLink>
-                  <s.SpacerSmall />
-                  <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
-                    <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
-                  </MediaStyledLink>
-                  <s.SpacerSmall />
-                  <MediaStyledLink href="https://opensea.io" target="_blank">
-                    <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
-                  </MediaStyledLink>
-                </s.Container>
+                    <s.SpacerSmall />
+                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                      <StyledButton
+                        disabled={claimingNft ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          claimNFTs();
+                          getData();
+                        }}
+                      >
+                        {claimingNft ? "BUSY" : "BUY"}
+                      </StyledButton>
+                    </s.Container>
+                  </>
+                )}
               </>
             )}
-          </>
-        )}
+            <s.SpacerMedium/>
             <s.SpacerMedium />
           </s.Container>
           <s.SpacerLarge />
@@ -490,7 +480,33 @@ export default function Mint() {
               style={{ transform: "scaleX(-1)" }}
             />
           </s.Container>
+          
         </ResponsiveWrapper>
+        
+        <crypto-converter-widget
+                  shadow symbol live background-color="#383a59"
+                  border-radius="0.60rem"
+                  fiat="british-pound-sterling"
+                  crypto="ethereum"
+                  amount="1"
+                  decimal-places="2"
+                  style={{
+                    backgroundColor: "var(--primary)",
+                    padding: 0,
+                    borderRadius: 12,
+                    border: "2px solid var(--border)",
+                    boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)"
+                  }}>
+                    
+                </crypto-converter-widget>
+                <a
+                  href="https://currencyrate.today/"
+                  target="_blank"
+                  rel="noopener">
+                </a>
+                <script async src="https://cdn.jsdelivr.net/gh/dejurin/crypto-converter-widget@1.5.2/dist/latest.min.js">
+                </script>
+        
       </s.Container>
     </s.Screen >
   );
