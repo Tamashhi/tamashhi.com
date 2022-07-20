@@ -210,6 +210,12 @@ export default function Layout() {
                   </s.navbar>
                 </MediaStyledLink>
                 <s.SpacerLarge/>
+                <MediaStyledLink href="/Roadmap" >
+                  <s.navbar>
+                    Roadmap
+                  </s.navbar>
+                </MediaStyledLink>
+                <s.SpacerLarge/>
                 <MediaStyledLink href="/Mint" >
                   <s.navbar>
                     Mint

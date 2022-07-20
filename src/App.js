@@ -5,6 +5,7 @@ import About from './About'
 import Staking from './Staking'
 import Mint from './Mint'
 import Layout from './Layout'
+import Roadmap from './Roadmap'
 import Hidden from './Hidden'
 
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="staking" element={<Staking />} />
             <Route path="mint" element={<Mint />} />
+            <Route path="roadmap" element={<Roadmap/>} />
             <Route path="hidden" element={<Hidden />} />
           </Route>
         </Routes>
