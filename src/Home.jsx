@@ -348,7 +348,7 @@ export default function Home() {
             }}>
               More coming soon.
             </s.SmallDescription>
-            <StyledLink href="/Hidden">
+            <StyledLink href="/soon">
               <s.SmallDescription style={{
                 textAlign: "center",
                 color: "var(--secondary-text)",

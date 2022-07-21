@@ -6,6 +6,7 @@ import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import TimelineImg from "./TimelineImg"
 
 const truncate = (input, len) =>
     input.length > len ? `${input.substring(0, len)}...` : input;
@@ -315,7 +316,8 @@ export default function Roadmap() {
                                 className="vertical-timeline-element--work"
                                 contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                                 contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                                iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                iconStyle={{ background: 'rgb(90, 163, 194)', color: '#fff' }}
+                                icon={<TimelineImg />}
                             >
                                 <h3 className="vertical-timeline-element-title">Tamashhi</h3>
                                 <p>
@@ -325,6 +327,8 @@ export default function Roadmap() {
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
                                 iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                icon={<TimelineImg />}
+
                             >
                                 <h3 className="vertical-timeline-element-title">Staking</h3>
                                 <p>
@@ -334,6 +338,8 @@ export default function Roadmap() {
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
                                 iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                icon={<TimelineImg />}
+
                             >
                                 <h3 className="vertical-timeline-element-title">???</h3>
                                 <p>
@@ -343,6 +349,8 @@ export default function Roadmap() {
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
                                 iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                icon={<TimelineImg />}
+
                             >
                                 <h3 className="vertical-timeline-element-title">???</h3>
                                 <p>
@@ -352,6 +360,8 @@ export default function Roadmap() {
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--education"
                                 iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                icon={<TimelineImg />}
+
                             >
                                 <h3 className="vertical-timeline-element-title">???</h3>
                                 <p>
@@ -361,6 +371,8 @@ export default function Roadmap() {
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--education"
                                 iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                icon={<TimelineImg />}
+
                             >
                                 <h3 className="vertical-timeline-element-title">???</h3>
                                 <p>
@@ -370,6 +382,8 @@ export default function Roadmap() {
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--education"
                                 iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                icon={<TimelineImg />}
+
                             >
                                 <h3 className="vertical-timeline-element-title">???</h3>
                                 <p>
@@ -379,6 +393,8 @@ export default function Roadmap() {
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--education"
                                 iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                icon={<TimelineImg />}
+
                             >
                                 <h3 className="vertical-timeline-element-title">???</h3>
                                 <p>

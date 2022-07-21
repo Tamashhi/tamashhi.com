@@ -217,19 +217,20 @@ export default function Hidden() {
                         flex={1}
                         ai={"center"}
                         style={{
-                            backgroundColor: "var(--primary)",
-                            padding: 24,
-                            borderRadius: 0,
-                            border: "2px solid var(--border)",
-                            boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
+                          backgroundColor: "var(--primary)",
+                          padding: 24,
+                          borderRadius: 0,
+                          border: "2px solid var(--border)",
+                          boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
                         }}>
                         <s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge />
                         <s.TamashhiTitle
                             style={{
                                 textAlign: "center",
-                                color: "var(--secondary-text)",
-                            }}>
-                            soon
+                                color: "var(--primary-text)",
+                                font: "initial"
+                                }}>
+                            404
                         </s.TamashhiTitle>
                     </s.Container>
                 </s.Container>

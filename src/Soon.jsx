@@ -1,11 +1,12 @@
-import { Outlet, Link } from 'react-router-dom'
 import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
-import { Container } from 'react-bootstrap';
+
+const truncate = (input, len) =>
+    input.length > len ? `${input.substring(0, len)}...` : input;
 
 export const StyledButton = styled.button`
   padding: 10px;
@@ -61,6 +62,20 @@ export const ResponsiveWrapper = styled.div`
   width: 100%;
   @media (min-width: 767px) {
     flex-direction: row;
+    fontSize: 50;
+  }
+`;
+
+export const ResponsiveWrapper1 = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: stretched;
+  align-items: stretched;
+  width: 100%;
+  @media (min-width: 800px) {
+    flex-direction: column;
+    fontSize: 50;
   }
 `;
 
@@ -70,7 +85,7 @@ export const StyledLogo = styled.img`
   background-color: var(--accent);
   border-radius: 100%;
   width: 200px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 250px;
   }
   @media (min-width: 1000px) {
@@ -91,8 +106,8 @@ export const StyledImg = styled.img`
   border: 4px  var(--secondary);
   background-color: var(--accent);
   border-radius: 100%;
-  width: 200px;
-  @media (min-width: 900px) {
+  width: 150px;
+  @media (min-width: 800px) {
     width: 250px;
   }
   @media (min-width: 1000px) {
@@ -106,7 +121,7 @@ export const SmallStyledImg = styled.img`
   background-color: var(--accent);
   border-radius: 100%;
   width: 50px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 50px;
   }
   @media (min-width: 1000px) {
@@ -119,7 +134,7 @@ export const MedStyledImg = styled.img`
   background-color: var(--accent);
   border-radius: 100%;
   width: 200px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 200px;
   }
   @media (min-width: 1000px) {
@@ -128,22 +143,33 @@ export const MedStyledImg = styled.img`
   transition: width 0.5s;
 `;
 export const TransparentStyledLogo = styled.img`
-  width: 100px;
-  @media (min-width: 900px) {
-    width: 150px;
+  width: 200px;
+  @media (min-width: 800px) {
+    width: 250px;
   }
   @media (min-width: 1000px) {
-    width: 150px;
+    width: 300px;
+  }
+  transition: width 0.5s;
+`;
+export const TransparentStyledTitle = styled.img`
+  width: 200px;
+  @media (min-width: 800px) {
+    width: 300px;
+  }
+  @media (min-width: 1000px) {
+    width: 800px;
   }
 `;
 export const SmallTranStyledLogo = styled.img`
-  width: 50px;
-  @media (min-width: 900px) {
-    width: 100px;
+  width: 100px;
+  @media (min-width: 800px) {
+    width: 10px;
   }
   @media (min-width: 1000px) {
     width: 100px;
   }
+  transition: width 0.5s;
 `;
 export const RMStyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
@@ -151,7 +177,7 @@ export const RMStyledImg = styled.img`
   background-color: var(--accent);
   border-radius: 10%;
   width: 50px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 100px;
   }
   @media (min-width: 1000px) {
@@ -164,7 +190,7 @@ export const TallRMStyledImg = styled.img`
   border: 2px solid var(--border);
   border-radius: 100px;
   width: 50px;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     width: 50px;
   }
   @media (min-width: 1000px) {
@@ -181,53 +207,31 @@ export const StyledLink = styled.a`
   text-decoration: none;
 `;
 
-export const navbar = styled.p`
-color:var(--secondary-text);
-font-size: 20px;
-line-height:1.6;
-@media (min-width:800px){
-  font-size:40px;
-}
-`;
 
-export default function Layout() {
-  return (
-    <ResponsiveWrapper flex={1} >
-      <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
+export default function Hidden() {
+    return (
         <s.Screen>
-          <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}
-            image={"/config/images/navbar.png"}>
-            <ResponsiveWrapper>
-              <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-                <MediaStyledLink href="/" >
-                  <s.navbar>
-                    Home
-                  </s.navbar>
-                </MediaStyledLink>
-                <s.SpacerLarge />
-                <MediaStyledLink href="/About" >
-                  <s.navbar>
-                    About
-                  </s.navbar>
-                </MediaStyledLink>
-                <s.SpacerLarge />
-                <MediaStyledLink href="/Roadmap" >
-                  <s.navbar>
-                    Roadmap
-                  </s.navbar>
-                </MediaStyledLink>
-                <s.SpacerLarge />
-                <MediaStyledLink href="/Mint" >
-                  <s.navbar>
-                    Mint
-                  </s.navbar>
-                </MediaStyledLink>
-              </s.Container>
+            <ResponsiveWrapper flex={1}>
+                <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
+                    <s.Container
+                        flex={1}
+                        ai={"center"}
+                        style={{
+                            backgroundColor: "var(--secondary-text)",
+
+                        }}>
+                        <s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge />
+                        <s.TamashhiTitle
+                            style={{
+                                textAlign: "center",
+                                color: "var(--background)",
+                                font: "initial"
+                                }}>
+                            soon
+                        </s.TamashhiTitle>
+                    </s.Container>
+                </s.Container>
             </ResponsiveWrapper>
-          </s.Container>
-          <Outlet />
-        </s.Screen>
-      </s.Container >
-    </ResponsiveWrapper >
-  )
+        </s.Screen >
+    );
 }

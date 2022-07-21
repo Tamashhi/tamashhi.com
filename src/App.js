@@ -6,23 +6,23 @@ import Staking from './Staking'
 import Mint from './Mint'
 import Layout from './Layout'
 import Roadmap from './Roadmap'
-import Hidden from './Hidden'
-
+import NotFound from './NotFound'
+import Soon from './Soon'
 
 function App() {
   return (
     <div className="App">
-
       <BrowserRouter>
-        <Routes>
+        <Routes >
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="staking" element={<Staking />} />
             <Route path="mint" element={<Mint />} />
             <Route path="roadmap" element={<Roadmap/>} />
-            <Route path="hidden" element={<Hidden />} />
+            <Route path="*" element={<NotFound/>}/>
           </Route>
+          <Route path="Soon" element={<Soon/>}/>
         </Routes>
       </BrowserRouter>
     </div>
