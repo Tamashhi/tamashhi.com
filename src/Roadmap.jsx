@@ -216,40 +216,7 @@ export default function Roadmap() {
         <s.Screen>
             <ResponsiveWrapper flex={1}>
                 <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
-                    <s.Container
-                        flex={1}
-                        ai={"center"}
-                        style={{
-                            backgroundColor: "var(--primary)",
-                            padding: 24,
-                            borderRadius: 0,
-                            border: "2px solid var(--border)",
-                            boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
-                        }}
-                        image={"/config/images/banner.png"}>
-                        <s.SpacerLarge />
-                        <TransparentStyledLogo src="./config/images/logoShiny.png" />
-
-                        <s.HomeTitle>
-                            Roadmap
-                        </s.HomeTitle>
-                        <ResponsiveWrapper1>
-                            <s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge /><s.SpacerLarge />
-                        </ResponsiveWrapper1>
-                        <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                            <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
-                                <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
-                            </MediaStyledLink>
-                            <s.SpacerSmall />
-                            <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
-                                <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
-                            </MediaStyledLink>
-                            <s.SpacerSmall />
-                            <MediaStyledLink href="https://opensea.io/tamashhi" target="_blank">
-                                <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
-                            </MediaStyledLink>
-                        </s.Container>
-                    </s.Container>
+                    
 
                     <s.Container
                         flex={1}
@@ -262,7 +229,7 @@ export default function Roadmap() {
                             border: "2px solid var(--border)",
                             boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
                         }}
-                        image={"/config/images/back.png"}>
+                        image={"/config/images/banner.png"}>
                         <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
                             <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
                                 <s.TamashhiTitle style={{
@@ -316,7 +283,7 @@ export default function Roadmap() {
                                 className="vertical-timeline-element--work"
                                 contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                                 contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                                iconStyle={{ background: 'rgb(90, 163, 194)', color: '#fff' }}
+                                iconStyle={{ background: 'rgb(91, 173, 204)', color: '#fff' }}
                                 icon={<TimelineImg />}
                             >
                                 <h3 className="vertical-timeline-element-title">Tamashhi</h3>
@@ -326,7 +293,7 @@ export default function Roadmap() {
                             </VerticalTimelineElement>
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
-                                iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                iconStyle={{ background: 'rgb(91, 173, 204)', color: '#fff' }}
                                 icon={<TimelineImg />}
 
                             >
@@ -337,7 +304,7 @@ export default function Roadmap() {
                             </VerticalTimelineElement>
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
-                                iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                iconStyle={{ background: 'rgb(91, 173, 204)', color: '#fff' }}
                                 icon={<TimelineImg />}
 
                             >
@@ -348,7 +315,7 @@ export default function Roadmap() {
                             </VerticalTimelineElement>
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
-                                iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                iconStyle={{ background: 'rgb(91, 173, 204)', color: '#fff' }}
                                 icon={<TimelineImg />}
 
                             >
@@ -359,7 +326,7 @@ export default function Roadmap() {
                             </VerticalTimelineElement>
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--education"
-                                iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                iconStyle={{ background: 'rgb(91, 173, 204)', color: '#fff' }}
                                 icon={<TimelineImg />}
 
                             >
@@ -370,7 +337,7 @@ export default function Roadmap() {
                             </VerticalTimelineElement>
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--education"
-                                iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                iconStyle={{ background: 'rgb(91, 173, 204)', color: '#fff' }}
                                 icon={<TimelineImg />}
 
                             >
@@ -381,7 +348,7 @@ export default function Roadmap() {
                             </VerticalTimelineElement>
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--education"
-                                iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                iconStyle={{ background: 'rgb(91, 173, 204)', color: '#fff' }}
                                 icon={<TimelineImg />}
 
                             >
@@ -392,7 +359,7 @@ export default function Roadmap() {
                             </VerticalTimelineElement>
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--education"
-                                iconStyle={{ background: 'rgb(200, 50, 256)', color: '#fff' }}
+                                iconStyle={{ background: 'rgb(91, 173, 204)', color: '#fff' }}
                                 icon={<TimelineImg />}
 
                             >

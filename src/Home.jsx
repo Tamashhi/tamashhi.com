@@ -220,7 +220,7 @@ export default function Home() {
               backgroundColor: "var(--primary)",
               padding: 24,
               borderRadius: 0,
-              border: "2px solid var(--border)",
+              border: "1px solid var(--border)",
               boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
             }}
             image={"/config/images/banner.png"}>
@@ -250,6 +250,7 @@ export default function Home() {
               </MediaStyledLink>
             </s.Container>
           </s.Container>
+          
 
           <s.Container
             flex={1}
@@ -259,11 +260,13 @@ export default function Home() {
               backgroundColor: "var(--primary)",
               padding: 24,
               borderRadius: 0,
-              border: "2px solid var(--border)",
+              border: "1px solid var(--border)",
               boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
             }}
             image={"/config/images/back.png"}>
-            <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
+            <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}
+            >
+              
               <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
                 <s.TamashhiTitle style={{
                   textAlign: "center",
@@ -338,7 +341,7 @@ export default function Home() {
               backgroundColor: "var(--primary)",
               padding: 24,
               borderRadius: 0,
-              border: "2px solid var(--border)",
+              border: "1px solid var(--border)",
               boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
             }}>
 
