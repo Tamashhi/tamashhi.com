@@ -248,7 +248,7 @@ export default function Roadmap() {
                                     textAlign: "center",
                                     color: "var(--secondary-text)",
                                 }}>
-                                    7,777
+                                    ???
                                 </s.SmallDescription>
                                 <s.TitleDescription style={{
                                     textAlign: "center",
@@ -297,7 +297,7 @@ export default function Roadmap() {
                                 icon={<TimelineImg />}
 
                             >
-                                <h3 className="vertical-timeline-element-title">Staking</h3>
+                                <h3 className="vertical-timeline-element-title">???</h3>
                                 <p>
                                     ???
                                 </p>

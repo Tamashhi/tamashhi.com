@@ -283,7 +283,7 @@ export default function Home() {
                   textAlign: "center",
                   color: "var(--secondary-text)",
                 }}>
-                  7,777
+                  ???
                 </s.SmallDescription>
                 <s.TitleDescription style={{
                   textAlign: "center",
