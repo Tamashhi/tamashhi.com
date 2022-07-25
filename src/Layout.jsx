@@ -25,20 +25,51 @@ export const MediaStyledLink = styled.a`
   text-decoration: none;
   `;
 
+export const SmallStyledImg = styled.img`
+  box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
+  background-color: var(--accent);
+  border-radius: 100%;
+  width: 50px;
+  @media (min-width: 800px) {
+    width: 50px;
+  }
+  @media (min-width: 1000px) {
+    width: 50px;
+  }
+  transition: width 0.5s;
+`;
+
+export const TransparentStyledLogo = styled.img`
+  width: 20px;
+  @media (min-width: 800px) {
+    width: 25px;
+  }
+  @media (min-width: 1000px) {
+    width: 60px;
+  }
+  transition: width 0.5s;
+`;
+
 export default function Layout() {
   return (
     <ResponsiveWrapper flex={1} >
       <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
         <s.Screen>
           <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}
-            >
+          >
             <ResponsiveWrapper>
-              <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
-                <MediaStyledLink href="/" >
+              <s.Container flex={1} jc={"left"} ai={"center"} fd={"row"}>
+                <MediaStyledLink href="/">
+                <s.Container flex={1} jc={"left"} ai={"center"} fd={"row"}>
+                  <TransparentStyledLogo src="./config/images/logoShiny.png" />
                   <s.navbar>
-                    Home
+                    Tamashhi
                   </s.navbar>
+                  </s.Container>
                 </MediaStyledLink>
+              </s.Container>
+
+              <s.Container flex={1} jc={"right"} ai={"center"} fd={"row"}>
                 <s.SpacerLarge />
                 <MediaStyledLink href="/About" >
                   <s.navbar>
@@ -57,7 +88,20 @@ export default function Layout() {
                     Mint
                   </s.navbar>
                 </MediaStyledLink>
+                <s.SpacerSmall />
+                <MediaStyledLink href="https://twitter.com/tamashhi" target="_blank" >
+                  <SmallStyledImg alt="Twitter" src="/config/images/twitter.png" />
+                </MediaStyledLink>
+                <s.SpacerSmall />
+                <MediaStyledLink href="https://discord.gg/cVn7EvyqM2" target="_blank">
+                  <SmallStyledImg alt="Discord" src="/config/images/discord.png" />
+                </MediaStyledLink>
+                <s.SpacerSmall />
+                <MediaStyledLink href="https://opensea.io/tamashhi" target="_blank">
+                  <SmallStyledImg alt="OpenSea" src="/config/images/openSea.png" />
+                </MediaStyledLink>
               </s.Container>
+              <s.SpacerSmall />
             </ResponsiveWrapper>
           </s.Container>
           <Outlet />

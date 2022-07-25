@@ -264,8 +264,7 @@ export default function Home() {
               boxShadow: "0px 1px 50px rgba(0,0,0,0.7)"
             }}
             image={"/config/images/back.png"}>
-            <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}
-            >
+            <s.Container flex={1} jc={"center"} ai={"center"} fd={"row"}>
               
               <s.Container flex={1} jc={"center"} ai={"center"} fd={"column"}>
                 <s.TamashhiTitle style={{
