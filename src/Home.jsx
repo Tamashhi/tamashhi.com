@@ -348,21 +348,21 @@ export default function Home() {
               textAlign: "center",
               color: "var(--secondary-text)",
             }}>
-              More coming soon.
+              More coming soon...
             </s.SmallDescription>
-            <StyledLink href="/soon">
+            <StyledLink>
               <s.SmallDescription style={{
                 textAlign: "center",
                 color: "var(--secondary-text)",
               }}>
-                .
+                
               </s.SmallDescription>
             </StyledLink>
             <s.SmallDescription style={{
               textAlign: "center",
               color: "var(--secondary-text)",
             }}>
-              .
+              
             </s.SmallDescription>
           </s.Container>
         </s.Container>
